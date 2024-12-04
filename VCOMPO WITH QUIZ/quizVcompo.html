@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz: VIDEOGRAPHY COMPONENTS</title>
+  <link rel="stylesheet" href="quizVcompo.css">
+</head>
+<body>
+  <div id="gif-container">
+    <img src="img/quizt.gif" alt="It's Quiz Time!" />
+  </div>
+  
+  <!-- Quiz Container -->
+  <div id="quiz-container" class="quiz-box" style="display: none;">
+    <div class="question-box">
+      <div id="question" class="question"></div>
+    </div>
+    <div class="options-box">
+      <div class="option" id="option-0">A: <span id="option-text-0"></span></div>
+      <div class="option" id="option-1">B: <span id="option-text-1"></span></div>
+      <div class="option" id="option-2">C: <span id="option-text-2"></span></div>
+      <div class="option" id="option-3">D: <span id="option-text-3"></span></div>
+    </div>
+    <button id="next-button" class="next-button" onclick="nextQuestion()">Next</button>
+  </div>
+
+  <!-- Result Container -->
+  <div id="result-container" class="result-container" style="display: none;">
+    <h2>Quiz Complete!</h2>
+    <p>Your total score is <span id="score"></span> out of <span id="total"></span>.</p>
+    <button id="restart-button" onclick="restartQuiz()">Restart</button>
+  </div>
+
+  <script src="quizVcompo.js"></script>
+</body>
+</html>

@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+body{
+  background-color: white;
+  color: #333;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+body p{
+  text-align: justify;
+}
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    top: 100px;
+  }
+  .title {
+    font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      padding: 20px;
+      margin-bottom: -50px;
+      text-align: center;
+      overflow: hidden; /* Ensure animation stays within bounds */
+      position: relative; /* Important for animation positioning */
+      transform: translateY(100%) rotate(0deg); /* Start below with no rotation */
+      animation: rotateAndSlideIn 2s ease-out forwards; /* Apply animation */
+      top: -40px;
+      font-size: 80px;
+  }
+  @keyframes rotateAndSlideIn {
+    0% {
+      transform: translateY(50px); /* Start below */
+      opacity: 0; /* Invisible at start */
+  }
+  100% {
+      transform: translateY(0); /* End at original position */
+      opacity: 1; /* Fully visible */
+  }
+}
+
+
+  .header-image img {
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+  }
+
+  .topics {
+    position: relative;
+    top: 1px;
+    border-radius: 5px;
+    margin-top: -5px;
+    background: gray;
+    padding: 1px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+  }
+  .topics p{
+    text-align: center;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .content h2 {
+    text-align: left;
+    font-size: 300%;
+    margin-bottom: 10px;
+  }
+  
+  .highlight {
+    background: linear-gradient(to right, #2cabe3, #38ca79); /* What is Rule of Thirds */
+    -webkit-background-clip: text; /* Clip the background to text */
+      -webkit-text-fill-color: transparent; /* Make the text transparent */
+    font-weight: bold;
+  }
+  
+  .content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 10px 0;
+    
+  }
+  .content-container{
+    position: relative;
+    top: -10px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+  }
+
+  .content-container4{
+    position: relative;
+    margin-top: -10%;
+    text-align: right;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  .content-container4 p{
+    text-align: right;
+  }
+  .content-container4 h2{
+    text-align: right;
+  }
+
+
+  .content-container2{
+    animation: slideInFromLeft 2s ease-out forwards;
+    position: relative;
+    margin-top: -10%;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .content-container2 h2{
+    font-size: 300%;
+    text-align: center;
+    margin-bottom: 9%;
+  }
+  
+  
+
+
+
+  .content-container1{
+    display: flex;
+    position: relative;
+    top: -130px;
+    text-align: center;
+    padding: 1px;
+    border-radius: 8px;
+    
+  }
+
+  .card-container{
+    display: flex;
+    position: relative;
+  }
+  .card-container img{
+    position: relative;
+    top: 70px;
+    left: 5%;
+  }
+
+  .card-container .imageisolate{
+    right: 500%;
+  }
+
+
+  .card-container .card
+{
+    max-width: 300px;
+    height: 200px;
+    margin: 30px 10px;
+    padding: 1px 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+}
+.card{
+  position: relative;
+  left: -5px;
+}
+.card-container .card:hover
+{
+    height: 450px;
+}
+.card-container .imgContainer
+{
+    position: relative;
+    width:250px;
+    height:220px;
+    top:-50px;
+    left: 10px;
+    z-index: 1;
+}
+
+.card-container .imgContainer1
+{
+  position: relative;
+    width:250px;
+    height:220px;
+    top:-50px;
+    left: 10px;
+    z-index: 1;
+}
+
+.card-container .card .imgContainer img
+{
+  width:100% ;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+.card-container .card .imgContainer1 img
+{
+  width:100% ;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-left: -15%;
+}
+
+.card-container  .description
+{
+  line-height: 1.3;
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #333;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.card-container .card:hover .description
+{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.1s;
+    transform: translateX(0);
+}
+
+@media (max-width: 330px){
+    .card-container .card .imgContainer{
+        left: -2px;
+    }
+}
+
+
+
+.wrap-challenge{
+  display: flex;
+ }
+
+ .wrap-challenge img{
+  margin-top: 5%;
+  height: 300px;
+  margin-left: 3%;
+ }
+
+.wrap-tip{
+display: flex;
+margin-top: -15%;
+margin-left: -8%;
+}
+
+.wrap-tip img{
+height: fit-content;
+margin-top: 3% ;
+
+
+}
+
+.tips {
+position: relative;
+max-width: 600px; /* Limit box width */
+color: #333;
+border-radius: 10px; /* Rounded corners */
+background-color: #fff; /* Content background */
+line-height: 1.6; /* Improve readability */
+margin-top: 9%;
+margin-left: 12%;
+padding: 20px; /* Inner spacing */
+text-align: left;
+z-index: 1; /* Ensure content is above the pseudo-element */
+}
+
+.tips::before {
+content: '';
+position: absolute;
+top: -10px; /* Adjust for glowing area */
+left: -10px;
+right: -10px;
+bottom: -10px;
+border-radius: 15px; /* Match the rounded corners, adjust if needed */
+background: linear-gradient(to right, rgba(44, 171, 227, 0.5), rgba(56, 202, 121, 0.5));
+z-index: -1; /* Place behind the main content */
+filter: blur(10px); /* Creates the glowing effect */
+opacity: 1; /* Adjust for intensity */
+}
+.legend {
+position: absolute;
+top: -31px;
+left: 20px;
+background: linear-gradient(to right, #2cabe3, #38ca79);
+color: white; /* Blue text for "TIP" */
+font-weight: bold;
+font-size: 30px;
+padding: 0 10px;
+border-radius: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+.legend1 {
+position: absolute;
+top: -20px;
+left: 600px;
+background-color: linear-gradient(to right, #2cabe3, #38ca79); /* What is Rule of Thirds */
+color: #000000; /* Blue text for "TIP" */
+font-weight: bold;
+font-size: 25px;
+padding: 0 10px;
+border: 2px solid #686d72;
+border-radius: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.challenge{
+position: relative;
+max-width: 600px; /* Limit box width */
+color: #333;
+border-radius: 10px; /* Rounded corners */
+background-color: #fff; /* Content background */
+line-height: 1.6; /* Improve readability */
+margin-top: 9%;
+margin-left: 1%;
+padding: 20px; /* Inner spacing */
+text-align: left;
+z-index: 1; /* Ensure content is above the pseudo-element */
+}
+.challenge::before {
+content: '';
+position: absolute;
+top: -10px; /* Adjust for glowing area */
+left: -10px;
+right: -10px;
+bottom: -10px;
+border-radius: 15px; /* Match the rounded corners, adjust if needed */
+background: linear-gradient(to right, rgba(44, 171, 227, 0.5), rgba(56, 202, 121, 0.5));
+z-index: -1; /* Place behind the main content */
+filter: blur(10px); /* Creates the glowing effect */
+opacity: 1; /* Adjust for intensity */
+} 
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%); /* Start off-screen */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .in-view {
+    animation: slideInFromLeft 2s ease-out forwards;
+  
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%); /* Start off-screen */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .in-viewright {
+    animation: slideInFromRight 2s ease-out forwards;
+  
+  }
+
+
+
+  .wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -10%;
+  }
+/*   
+  .wrapper1 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -4%;
+  } */
+.try{
+  display: flex;
+}
+  .wrapper-portrait {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -12%;
+  }
+  
+  .col {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .containert {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+  }
+  .image{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  .image img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1; /* Ensure image is above description initially */
+    transition: transform 0.3s ease; /* Smooth transition for movement */
+  }
+  
+  .image:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  .desc {
+    position: absolute;
+    bottom: -100%; /* Hidden below the container */
+    left: -9%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: white;
+    text-align: left;
+    padding-left: 30px;
+    transition: bottom 0.3s ease; /* Smooth transition */
+    z-index: 2; /* Ensure description appears above the image */
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+    font-family: 'Open Sans', sans-serif;
+        line-height: 1.4; /* Improve readability */
+  
+  }
+  
+  .desc p{
+    padding-left:2% ;
+    padding-right:5% ;
+    font-size: 90%;
+  
+  }
+  
+  
+  
+  .image:hover + .desc {
+    bottom: 0; /* Slide up into view when hovering over the image */
+  }
+  .quiz-button {
+    background: linear-gradient(45deg, #2cabe3, #38ca79);
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    margin-top: 80px;
+    margin-left: 450px;
+}
+
+.quiz-button:hover {
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.quiz-button:active {
+    transform: translateY(0);
+}
+
+.quiz-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(29, 202, 194);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.quiz-button:hover::after {
+    opacity: 1;
+}

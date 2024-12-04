@@ -1,0 +1,1091 @@
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%); /* Start off-screen */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%); /* Start off-screen to the right */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0); /* End at the original position */
+      opacity: 1;
+    }
+  }
+  
+  /* Keyframe for fading in the paragraph */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Keyframe for a slight bounce effect for the highlighted text */
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Move up a little */
+    }
+    100% {
+      transform: translateY(0); /* Return to original position */
+    }
+  }
+  
+  
+  .in-view {
+    animation: slideInFromLeft 2s ease-out forwards;
+   
+  }
+  
+  .in-viewright {
+    animation: slideInFromRight 2s ease-out forwards; /* Apply animation with 2 seconds duration */
+    position: relative; /* Ensure the element is positioned for the transform to work */
+   
+  }
+  
+  
+  
+  body{
+    color: whitesmoke;
+    background-color:white;
+      margin: auto;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Open Sans', sans-serif;
+      max-width: 1200px;
+    }
+
+  .container{
+    margin: 20px auto;
+    background:transparent;
+    border-radius: 8px;
+    box-shadow: transparent;
+    overflow: hidden;
+    padding: 0px;
+    text-align: center;
+    
+  }
+
+  
+  
+  .header-image img {
+      width: 70%;
+      height: auto;
+      margin-top: 2px;
+    }
+  
+  
+    .overlay-text {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      padding: 0px;
+      margin-bottom: -50px;
+      text-align: center;
+      position: relative; /* Important for animation positioning */
+  
+   
+    }
+  
+    @keyframes rotateAndSlideIn {
+      0% {
+          transform: translateY(50px); /* Start below */
+          opacity: 0; /* Invisible at start */
+      }
+      100% {
+          transform: translateY(0); /* End at original position */
+          opacity: 1; /* Fully visible */
+      }
+  }
+  
+    .overlay-text h1 {
+      font-size: 5rem;
+      font-weight: bold;
+      transform: translateY(100%) rotate(0deg); /* Start below with no rotation */
+      animation: rotateAndSlideIn 2s ease-out forwards; /* Apply animation */
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #2cabe3, #38ca79); /* What is Rule of Thirds */
+      -webkit-background-clip: text; /* Clip the background to text */
+      -webkit-text-fill-color: transparent; /* Make the text transparent */
+    }
+    
+
+    .examplesgrid{
+      text-align: center;
+    }
+  
+    .examplesgrid h2 {
+      font-size: 50px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #333;
+      margin-top: -70px;
+      margin-bottom: 100px;
+      
+    }
+
+
+
+   
+    
+
+      /* border-radius: 5px;
+      margin-top: -5px;
+      background: linear-gradient(to right, #8cd4f3, #adfcd0); Gradient colors */
+      /* text-align: center;
+      padding: 10px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #333;
+      font-family: 'Open Sans', sans-serif;
+      width: 50%;
+    } */
+    
+    
+  
+  @keyframes contentanim{
+    from {opacity: 0;}
+    to{opacity: 1;}
+  }
+    
+  
+    .content  {
+      position: relative;
+      padding: 15%;
+      margin-top: -12%;
+      
+  
+    }
+  
+   
+  .whatis{
+    font-size: 10px;
+    margin-top:-50px ;
+  
+  
+  
+    #ruleOfThirds .highlight {  
+      font-weight: bold;
+      background: linear-gradient(to right, #2cabe3, #38ca79); /* What is Rule of Thirds */
+      -webkit-background-clip: text; /* Clip the background to text */
+      -webkit-text-fill-color: transparent; /* Make the text transparent */
+   
+    }
+
+
+    h2#ruleOfThirds{
+      text-align: left;
+      font-size: 500%;
+      margin-bottom: 20px;
+      color: #333;
+      margin-bottom: 10px;
+      margin-top: 100px;
+      margin-left: 15%;
+    }
+    
+  
+    .services-section {
+      display: flex;
+      align-items: right;
+      text-align: right;
+      gap: 20px;
+  
+
+    } 
+  
+  }
+  .text h2{
+    text-align: right;
+    font-size: 300%;
+    margin-bottom: 0%;
+    color: #333;
+    margin-top: -21%;
+    margin-right: 5%;
+    line-height: 1.7;
+
+    
+  
+  
+  }
+  
+  .text-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.7; /* Improve readability */
+    text-align: left;
+    margin-top: -92px;
+    margin-left: 60px;
+    margin-right: 50px;
+   
+
+
+  }
+  
+  
+  #whatIsRule .highlight {  
+    font-weight: bold;
+    background: linear-gradient(to right, #2cabe3, #38ca79); /* What is Rule of Thirds */
+    -webkit-background-clip: text; /* Clip the background to text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent */
+    margin-right: 10%;
+    
+  }
+  
+  
+   
+    .content p {
+      font-size: 1rem;
+      margin-bottom: 100px;
+      color: #666;
+      line-height: 1.7; /* Improve readability */
+
+      text-align: left;
+      margin-top: -25px;
+      
+    }
+  
+    .how-it-works {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: -16%;
+  }
+    
+    .how-it-works h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    
+  
+  
+    
+    /* Text Section */
+    .text-content {
+      flex: 1;
+      text-align: right;
+      padding: 10%;
+    }
+    
+    .text-content h3 {
+      font-size: 5rem;
+      color: #333;
+      margin-top: 20px;
+   
+    }
+    
+   
+    /* Visual Section */
+    .visual-content {
+      flex: 1;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .icon {
+      width: 100px;
+      height: 60px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+    }
+    
+    .location {
+      background-color: #ffe6e6;
+      color: #ff5733;
+      font-size: 0.9rem;
+    }
+    
+    .step-circle {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 50px;
+      background: #ff9999;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+  
+  
+    
+  
+    
+    .for-gif {
+      display: block;
+      align-items: center; /* Centers both the image and text horizontally */
+    }
+
+  
+    .for-gif h2 {
+      margin-top: 100px; /* Adds space between the image and the heading */
+      color: #333;
+      margin-bottom: 200px;
+      font-size: 250%;
+    }
+  .iphone{
+    color: #006E51;
+    margin-bottom: 10%;
+    margin-top: -10%;
+    padding: 0%;
+  
+    /* margin-right: 60%; */
+  
+  }
+  .timeline-text{
+    display: flex;
+   
+  }
+  /* .iphone h3 {
+    position: relative;
+    left: 430%;
+  }
+  
+  .android h3 {
+    position: relative;
+    right: 120px;
+  } */
+  
+  h3.iphone {
+    margin-left: 20%;
+  }
+  h3.android {
+    margin-left: 45%;
+  }
+  
+  .android{
+    color: #006E51;
+    margin-bottom: 10%;
+    margin-top: -10%;
+    padding: 0%;
+    /* margin-left: 16%;
+    left: 100px; */
+  }
+    .timeline {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 10px 0;
+      margin-top: -10%;
+      margin-left: 3%;
+    }
+  
+    .arrange-timeline{
+      display: flex;
+    }
+    
+   
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background: #006E51;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1px;
+    }
+    
+    .containerr {
+      padding: 15px 30px;
+      position: relative;
+      background: inherit;
+      width: 50%;
+    }
+    
+    .containerr.left {
+      left: 0;
+    }
+    
+    .containerr.right {
+      left: 50%;
+    }
+    
+    .containerr::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: calc(50% - 8px);
+      right: -8px;
+      background: #ffffff;
+      border: 2px solid #006E51;
+      border-radius: 16px;
+      z-index: 1;
+    }
+    
+    .containerr.right::after {
+      left: -8px;
+    }
+    
+    .containerr::before {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      top: calc(50% - 1px);
+      right: 8px;
+      background: #006E51;
+      z-index: 1;
+    }
+    
+    .containerr.right::before {
+      left: 8px;
+    }
+    
+    .containerr .date {
+      position: absolute;
+      display: inline-block;
+      top: calc(50% - 8px);
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: #006E51;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      z-index: 1;
+    }
+    
+    .containerr.left .date {
+      right: -75px;
+    }
+    
+    .containerr.right .date {
+      left: -75px;
+    }
+    
+    .containerr .icon {
+      position: absolute;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      padding: 9px 0;
+      top: calc(50% - 20px);
+      background: #6fdba2;
+      border: 2px solid #6fdba2;
+      border-radius: 40px;
+      text-align: center;
+      font-size: 18px;
+      color: #6fdba2;
+      z-index: 1;
+    }
+    
+    .containerr.left .icon {
+      right: 56px;
+    }
+    
+    .containerr.right .icon {
+      left: 56px;
+    }
+    
+    .containerr .content2 {
+      padding: 30px 90px 30px 30px;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #a5ecc3 30%, #a5ecc3 70%, rgba(255, 255, 255, 0) 100%);
+    
+      position: relative;
+      border-radius: 0 500px 500px 0;
+      border: 1px solid #a5ecc3;
+     
+    }
+    
+    .containerr.right .content2 {
+      padding: 30px 30px 30px 90px;
+      border-radius: 500px 0 0 500px;
+    }
+    
+    .containerr .content2 h2 {
+      margin: 0 0 10px 0;
+      font-size: 15px;
+      font-weight: lighter;
+      color: #333;
+      font-family: 'Open Sans', sans-serif;
+      text-align: left;
+    }
+    
+    .containerr .content2 p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 22px;
+      color: #000000;
+    }
+    
+    @media (max-width: 767.98px) {
+      .timeline::after {
+        left: 90px;
+      }
+    
+      .containerr {
+        width: 100%;
+        padding-left: 120px;
+        padding-right: 30px;
+      }
+    
+      .containerr.right {
+        left: 0%;
+      }
+    
+      .containerr.left::after, 
+      .containerr.right::after {
+        left: 82px;
+      }
+    
+      .containerr.left::before,
+      .containerr.right::before {
+        left: 100px;
+        border-color: transparent #006E51 transparent transparent;
+      }
+    
+      .containerr.left .date,
+      .containerr.right .date {
+        right: auto;
+        left: 15px;
+      }
+    
+      .containerr.left .icon,
+      .containerr.right .icon {
+        right: auto;
+        left: 146px;
+      }
+    
+      .containerr.left .content,
+      .containerr.right .content {
+        padding: 30px 30px 30px 90px;
+        border-radius: 500px 0 0 500px;
+      }
+    }
+   
+  
+  
+  
+  
+  @keyframes slideInFromBelow {
+    0% {
+        transform: translateY(100%); /* Start off-screen below */
+    }
+    100% {
+        transform: translateY(0); /* End at original position */
+    }
+  }
+  
+  .in-viewbelow{
+    animation: slideInFromBelow 2s ease-out forwards;
+  }
+   
+  
+  
+  h2#whatIsRule {
+    font-size: 300%;
+  
+  }
+  
+  
+  
+    
+    .image-box1{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+    
+    .image-box {
+      flex: 1;
+      padding: 10px;
+    }
+  
+    .image-box img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .arrow {
+      flex-shrink: 0;
+      padding: 0 10px;
+    }
+    
+    .arrow img {
+      width: 50px; /* Adjust size of the arrow */
+      height: auto;
+    }
+  
+  .rot{
+    position: relative;
+    top: -100px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  .rot h2{
+      position: relative;
+      top: -20px;
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+  .rot img{
+      margin:auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-radius: 10px;
+  }
+  
+  .for-orientation{
+    color: #333 ;
+    padding: 10%;
+    text-align: left;
+    padding: 15%;
+  
+  }
+  
+  .landscapeClass{
+    font-size: 300%;
+    margin-top: -13%;
+    text-align: left;
+    margin-bottom: 10px;
+    line-height: 1.7; /* Improve readability */
+
+  }
+
+  .for-orientation p{
+
+ font-size: 1rem;
+ margin-bottom: 20px;
+ color: #333;
+ line-height: 1.7; /* Improve readability */
+ text-align: left;
+ margin-top: 0px;
+ 
+
+  }
+
+
+  .landscapeClass .highlight{
+    background: linear-gradient(to right, #2cabe3, #38ca79); /* What is Rule of Thirds */
+    -webkit-background-clip: text; /* Clip the background to text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent */
+  }
+  
+  
+    .l-container {
+      display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -10%;
+  }
+   
+  .description {
+    position: absolute;
+    bottom: -100%; /* Hidden below the container */
+    left: -9%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: white;
+    text-align: left;
+    padding-left: 30px;
+    transition: bottom 0.3s ease; /* Smooth transition */
+    z-index: 2; /* Ensure description appears above the image */
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+        line-height: 1.4; /* Improve readability */
+  
+  }
+  
+  .description p{
+    padding-left:2% ;
+    padding-right:2% ;
+  
+  }
+    
+   
+  .photo1:hover,.photo2:hover,.photo5:hover  {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+    
+    .photo1 {
+      width: 100%; /* Ensure responsive images */
+      max-width: 300px; /* Limit image width */
+      border-radius: 10px; /* Add rounded corners for a modern look */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      transition: transform 0.3s ease; /* Smooth zoom effect */
+      height: 99%;
+    }
+    .photo2 {
+      width: 100%; /* Ensure responsive images */
+      max-width: 300px; /* Limit image width */
+      border-radius: 10px; /* Add rounded corners for a modern look */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      transition: transform 0.3s ease; /* Smooth zoom effect */
+    }
+    .photo5 {
+      width: 100%; /* Ensure responsive images */
+      max-width: 300px; /* Limit image width */
+      border-radius: 10px; /* Add rounded corners for a modern look */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      transition: transform 0.3s ease; /* Smooth zoom effect */
+      height: 99%;
+    }
+  
+  
+    .p-container {
+      position: relative;
+      top: -90px;
+      left: 75px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+      max-width: 700px;
+      background-color: #C9E6F0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    
+    .l-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; /* Space between images */
+    }
+  
+    .image-item {
+      position: relative;
+      width: 300px; /* Adjust as needed */
+      height: 200px;
+      border-radius: 10px;
+      overflow: hidden; /* Ensures the image and description stay within rounded corners */
+    }
+  
+    .image-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  
+    .description2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+      color: #fff;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 0 0 10px 10px; /* Matches the bottom corners of the container */
+      opacity: 0; /* Initially hidden */
+      transform: translateY(20px); /* Slightly off-position for animation */
+      transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth hover effect */
+    }
+  
+    .image-item:hover .description2 {
+      opacity: 1; /* Fully visible on hover */
+      transform: translateY(0); /* Moves to its original position */
+    }
+  
+    .description2 p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: left;
+    }
+    .portraitclass{
+      font-size: 300%;
+      margin-top: -13%;
+      text-align: right;
+      margin-left: 11%;
+    }
+
+    .content-portrait p{
+ font-size: 1rem;
+ margin-bottom: 20px;
+ color: #666;
+ line-height: 1.7; /* Improve readability */
+ text-align: left;
+ margin-top: -20px;
+ margin-left: 20px;
+
+    }
+
+    .portraitclass .highlight{
+      background: linear-gradient(to right, #2cabe3, #38ca79); /* What is Rule of Thirds */
+    -webkit-background-clip: text; /* Clip the background to text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent */
+    }
+  
+    .content-portrait{
+      color: #333 ;
+    padding: 10%;
+    text-align: right;
+    padding: 15%;
+    }
+  
+   
+    .wrap-challenge{
+      display: flex;
+     }
+
+     .wrap-challenge img{
+      margin-top: 5%;
+      height: 300px;
+      margin-left: 9%;
+     }
+  
+ .wrap-tip{
+  display: flex;
+ }
+
+ .wrap-tip img{
+  height: fit-content;
+  margin-top: 3% ;
+  
+ 
+ }
+
+ .tips {
+  position: relative;
+  max-width: 600px; /* Limit box width */
+  color: #333;
+  border-radius: 10px; /* Rounded corners */
+  background-color: #fff; /* Content background */
+  line-height: 1.6; /* Improve readability */
+  margin-top: 9%;
+  margin-left: 12%;
+  padding: 20px; /* Inner spacing */
+  text-align: left;
+  z-index: 1; /* Ensure content is above the pseudo-element */
+}
+
+.tips::before {
+  content: '';
+  position: absolute;
+  top: -10px; /* Adjust for glowing area */
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 15px; /* Match the rounded corners, adjust if needed */
+  background: linear-gradient(to right, rgba(44, 171, 227, 0.5), rgba(56, 202, 121, 0.5));
+  z-index: -1; /* Place behind the main content */
+  filter: blur(10px); /* Creates the glowing effect */
+  opacity: 1; /* Adjust for intensity */
+}
+.legend {
+  position: absolute;
+  top: -31px;
+  left: 20px;
+  background: linear-gradient(to right, #2cabe3, #38ca79);
+  color: white; /* Blue text for "TIP" */
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+.legend1 {
+  position: absolute;
+  top: -20px;
+  left: 600px;
+  background-color: linear-gradient(to right, #2cabe3, #38ca79); /* What is Rule of Thirds */
+  color: #000000; /* Blue text for "TIP" */
+  font-weight: bold;
+  font-size: 25px;
+  padding: 0 10px;
+  border: 2px solid #686d72;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.challenge{
+  position: relative;
+  max-width: 600px; /* Limit box width */
+  color: #333;
+  border-radius: 10px; /* Rounded corners */
+  background-color: #fff; /* Content background */
+  line-height: 1.6; /* Improve readability */
+  margin-top: 9%;
+  margin-left: 1%;
+  padding: 20px; /* Inner spacing */
+  text-align: left;
+  z-index: 1; /* Ensure content is above the pseudo-element */
+}
+.challenge::before {
+  content: '';
+  position: absolute;
+  top: -10px; /* Adjust for glowing area */
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 15px; /* Match the rounded corners, adjust if needed */
+  background: linear-gradient(to right, rgba(44, 171, 227, 0.5), rgba(56, 202, 121, 0.5));
+  z-index: -1; /* Place behind the main content */
+  filter: blur(10px); /* Creates the glowing effect */
+  opacity: 1; /* Adjust for intensity */
+} 
+  
+  
+  .wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -16%;
+  }
+  
+  .wrapper1 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -4%;
+  }
+
+  .wrapper-portrait {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -12%;
+  }
+  
+  .col {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .containert {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1; /* Ensure image is above description initially */
+    transition: transform 0.3s ease; /* Smooth transition for movement */
+  }
+  
+  .image:hover .description {
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  .description {
+    position: absolute;
+    bottom: -100%; /* Hidden below the container */
+    left: -9%;
+    width: 100%;
+    padding-top: 2%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: white;
+    text-align: left;
+    padding-left: 30px;
+    transition: bottom 0.3s ease; /* Smooth transition */
+    z-index: 2; /* Ensure description appears above the image */
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+        line-height: 1.4; /* Improve readability */
+  
+  }
+  
+  .description p{
+    margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: left;
+  
+  }
+  
+  
+  
+  .image:hover + .description {
+    bottom: 0; /* Slide up into view when hovering over the image */
+  }
+  
+  
+  .quiz-button {
+    background: linear-gradient(45deg, #2cabe3, #38ca79);
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 80px;
+  }
+  
+  .quiz-button:hover {
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+    transform: translateY(-2px);
+  }
+  
+  .quiz-button:active {
+    transform: translateY(0);
+  }
+  
+  .quiz-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(29, 202, 194);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .quiz-button:hover::after {
+    opacity: 1;
+  }

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="login.css">
+    <title>Visualist</title>
+  </head>
+  <body>
+
+
+   <!-- Overlay -->
+   <div class="overlaying" id="overlay"></div>
+
+   <!-- Login Form -->
+   <div class="login-form-container" id="loginForm">
+    <img src="logo.png" alt="" id = "logo" >
+    <div class = "logo1"><span id = "visual">VISUALIST</span></div>
+       <div class = "form-card-container">
+           <div class = "card-form">
+               <div class = "card-front">
+                   <div class = "form-content">
+                       <h2>Log In</h2> 
+                       <form id="loginFormElement">                             
+                           <label for="username">Username: </label>
+                           <input type="text" id="username" name="username" required>
+                           <br>
+                           <label for="password">Password: </label>
+                           <div class="password-container">
+                               <input type="password" id="password" name="password" required oninput="checkPasswordInput(this, 'login')">
+                               <span class="toggle-password" id = "toggle-pass" onclick="togglePasswordVisibility()" style="display: none;">👁️</span>
+                           </div>
+                           <br>
+                           <button id = "btn" type="submit">Log In</button>
+                       </form>                        
+                       <button id = "btn" class="toggle-btn" onclick="flipCard()">Sign Up</button>
+                   </div>
+               </div>
+               <div class = "card-back">
+                   <div class ="form-content">
+                       <h2>Sign Up</h2>
+                       <form id="signupFormElement">                             
+                           <label for="create-user">Username: </label>
+                           <input type="text" id="create-user" name="create-user" required>
+                           <br>
+                           <label for="create-pass">Password: </label>
+                           <div class="password-container">
+                               <input type="password" id="create-pass" name="create-pass" required oninput="checkPasswordInput(this, 'signup')">
+                               <span class="toggle-password" id = "toggle-pass" onclick="togglePasswordVisibilitySignup()" style="display: none;">👁️</span>
+                           </div>
+                           <br>
+                           <button id = "btn" type="submit">Sign Up</button>
+                       </form>                        
+                       <!-- <button id = "btn" class="toggle-btn" onclick="flipCard()">Log In</button> -->
+                   </div>
+               </div>
+           </div>
+       </div>    
+   </div>        
+</div>
+<nav class="navbar">
+  <div class="content">
+    <div class="logo">
+      <a href="#">Visualist</a>
+    </div>
+    <ul class="menu-list">
+      <div class="icon cancel-btn">
+        <i class="fas fa-times"></i>
+      </div>
+      <li><a href="#" class="home">Home</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#" class="btnn login-btn">Log In</a></li>
+      <li><a href="#" class="btnn signup-btn">Sign Up</a></li>
+    </ul>
+    <div class="icon menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</nav>
+<div class="banner"></div>
+<div class="section__container popular__container">
+  <div class="timeline-container">
+    <div class="timeline-header">WHAT WE OFFER</div>
+    <div class="timeline-header"><h2>Supported courses and lessons</h2></div>
+    <div class="timeline">
+        <div class="timeline-item" data-year="1">
+            <div class="timeline-label" data-year="1">MULTIMEDIA ELEMENTS</div>
+            <div class="timeline-item-content" data-year="1">
+              <div class="pp">
+                <p>A range of elements including text, images, audio, video, animation, and interactive design, helping you create dynamic and engaging digital content.</p>
+              </div>
+            </div>
+        </div>
+        <!-- 2nd Year -->
+        <div class="timeline-item" data-year="2">
+            <div class="timeline-label" data-year="2">PHOTOGRAPHY</div>
+            <div class="timeline-item-content" data-year="2">
+                <div class="pp">
+                  <p>Key elements such as composition, lighting, editing, and digital techniques, helping you master the art of capturing and enhancing stunning images./p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                </div>
+            </div>
+        </div>
+        <!-- 3rd Year -->
+        <div class="timeline-item" data-year="3">
+            <div class="timeline-label" data-year="3">VIDEOGRAPHY</div>
+            <div class="timeline-item-content" data-year="3">
+              <div class="pp">
+                <p>Videography courses teach essential skills in camera techniques and lighting, helping you capture stunning, professional-quality videos.
+                </p>
+              </div>
+            </div>
+        </div>
+        <!-- Future Content -->
+        <div class="timeline-item" data-year="future">
+            <div class="timeline-label" data-year="future">QUIZZES</div>
+            <div class="timeline-item-content" data-year="future">
+              <div class="pp">
+                <p>We provide quizzes designed to help college students test their knowledge and learn effectively.</p>
+              </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+</div>
+</div>
+    <section class="section__container discover__container">
+      <h2 class="section__header">All Talent In One Place</h2>
+      <p class="section__description">
+        Check and discover the beauty of multimedia arts!
+      </p>
+      <div class="discover__grid">
+        <div class="discover__card">
+          <span><i class="ri-camera-lens-line"></i></span>
+          <h4>Photography</h4>
+          <p>
+            It requires understanding key elements like composition, lighting, and timing.
+          </p>
+        </div>
+        <div class="discover__card">
+          <span><i class="ri-mic-line"></i></span>
+          <h4>Video & Audio</h4>
+          <p>
+            A dynamic multimedia element that combines motion and sound, creating engaging and impactful content.
+          </p>
+        </div>
+        <div class="discover__card">
+          <span><i class="ri-camera-line"></i></span>
+          <h4>Camera Basic Elements</h4>
+          <p>
+            An essential parts that work together to capture an image.
+          </p>
+        </div>
+        <div class="discover__card">
+          <span><i class="ri-font-sans-serif"></i></span>
+          <h4>Multimedia Elements</h4>
+          <p>
+            Offering an immersive experience that goes beyond what single-medium content can achieve.
+        </div>
+        <div class="discover__card">
+          <span><i class="ri-video-line"></i></span>
+          <h4>Videography</h4>
+          <p>
+           The process of capturing moving images to tell stories and share experiences.
+          </p>
+        </div>
+        <div class="discover__card">
+          <span><i class="ri-movie-2-line"></i></span>
+          <h4>Pre-production Planning</h4>
+          <p>
+            The process of organizing and preparing everything needed before filming begins.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container client__container">
+      <section class="content-section">
+        <div class="content-text">
+          <h4>WHAT IS MULTIMEDIA FAIR USE?</h4>
+          <h1 class="checkbox-container">
+            A legal principle that defines the limitations on the exclusive rights of copyright holders.
+          </h1>
+        </div>
+        <div class="checkbox-container">
+          <span class="dont-dos">Copyright <span style="color: green;">Do’s</span> & <span style="color: red;">Don’ts</span></span>
+          <div class="checkbox-item">
+            <div class="checkbox">
+              <i class="ri-check-fill"></i>
+            </div>
+            <span class="description">Follow fair use for education, research, or parody.</span>
+          </div>
+          <div class="checkbox-item">
+            <div class="checkbox">
+              <i class="ri-check-fill"></i>
+            </div>
+            <span class="description">Use public domain or Creative Commons works.</span>
+          </div>
+          <div class="checkbox-item">
+            <div class="checkbox">
+              <i class="ri-check-fill"></i>
+            </div>
+            <span class="description">Use resources explicitly labeled as free for use</span>
+          </div>
+          <div class="checkbox-item">
+            <div class="checkbox1">
+              <i class="ri-close-fill"></i>
+            </div>
+            <span class="description">Don’t sell or profit from others’ work.</span>
+          </div>
+          <div class="checkbox-item">
+            <div class="checkbox1">
+              <i class="ri-close-fill"></i>
+            </div>
+            <span class="description">Don’t claim others’ content as your own.</span>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="section__container destination__container" id="about">
+      <h2 class="section__header">Best Outputs</h2>
+      <p class="section__description">
+        Discover the Most Loved projects by the developers 
+      </p>
+      <div class="destination__grid">
+        <div class="destination__card">
+          <img src="pics/ratedpic-kyot.jpg" alt="destination" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Miniature Photography</h4>
+              <p>Asian College of Technology</p>
+            </div>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.7
+            </div>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="pics/fromshyna.jpg" alt="destination" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Space Composition</h4>
+              <p>Asian College of Technology</p>
+            </div>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.5
+            </div>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="pics/ratedpic-nikol.jpg" alt="destination" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Island of the Gods</h4>
+              <p>Bali, Indonesia</p>
+            </div>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.8
+            </div>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="pics/ratedpic.jpg" alt="destination" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Festival Poster</h4>
+              <p>Cebu, Philippines</p>
+            </div>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.8
+            </div>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="pics/line.png" alt="destination" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Line Composition</h4>
+              <p>Balamban, Cebu</p>
+            </div>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.8
+            </div>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="pics/ratedpic-faith.png" alt="destination" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Island of the Gods</h4>
+              <p>Bali, Indonesia</p>
+            </div>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.8
+            </div>
+          </div>
+        </div>
+      </div>
+    </section
+
+    <footer id="contact">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#" class="logo">Visualist</a>
+          </div>
+          <p>
+            An Educational Website project open for all students.
+          </p>
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-youtube-line"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>CATEGORY</h4>
+          <ul class="footer__links">
+            <li><a href="#">Animation and Multimedia</a></li>
+            <li><a href="#">Proffesional Elective 1</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Developers</h4>
+          <ul class="footer__links">
+            <li><a href="#">Mr. Lawrence John Arche</a></li>
+            <li><a href="#">Ms. Shyna Ann De Guzman</a></li>
+            <li><a href="#">Mr. Louell Clifford Saguindan</a></li>
+            <li><a href="#">Ms. Faith Nicole Amila</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Adviser</h4>
+          <ul class="footer__links">
+            <span>MS. FARAH ALVARADO</span>
+            <span>Animation Multimedia Instuctor</span>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024 LFSY Creations. All rights reserved.
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      window.addEventListener('scroll', function () {
+      const nav = document.querySelector('nav');
+      const navHeader = document.querySelector('.nav__header');
+
+      if (window.scrollY > 0) {
+        nav.classList.add('sticky');
+        navHeader.classList.add('sticky');
+      } else {
+        nav.classList.remove('sticky');
+        navHeader.classList.remove('sticky');
+      }
+    });
+    </script>
+        <script src = "login.js"></script>
+
+  </body>
+</html>

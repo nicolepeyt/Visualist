@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+       <!-- Overlay -->
+   <div class="overlaying" id="overlay"></div>
+
+   <!-- Login Form -->
+   <div class="login-form-container" id="loginForm">
+    <img src="logo.png" alt="" id = "logo" >
+    <div class = "logo1"><span id = "visual">VISUALIST</span></div>
+       <div class = "form-card-container">
+           <div class = "card-form">
+               <div class = "card-front">
+                   <div class = "form-content">
+                       <h2>Log In</h2> 
+                       <form id="loginFormElement">                             
+                           <label for="username">Username: </label>
+                           <input type="text" id="username" name="username" required>
+                           <br>
+                           <label for="password">Password: </label>
+                           <div class="password-container">
+                               <input type="password" id="password" name="password" required oninput="checkPasswordInput(this, 'login')">
+                               <span class="toggle-password" id = "toggle-pass" onclick="togglePasswordVisibility()" style="display: none;">👁️</span>
+                           </div>
+                           <br>
+                           <button id = "btn" type="submit">Log In</button>
+                       </form>                        
+                       <button id = "btn" class="toggle-btn" onclick="flipCard()">Sign Up</button>
+                   </div>
+               </div>
+               <div class = "card-back">
+                   <div class ="form-content">
+                       <h2>Sign Up</h2>
+                       <form id="signupFormElement">                             
+                           <label for="create-user">Username: </label>
+                           <input type="text" id="create-user" name="create-user" required>
+                           <br>
+                           <label for="create-pass">Password: </label>
+                           <div class="password-container">
+                               <input type="password" id="create-pass" name="create-pass" required oninput="checkPasswordInput(this, 'signup')">
+                               <span class="toggle-password" id = "toggle-pass" onclick="togglePasswordVisibilitySignup()" style="display: none;">👁️</span>
+                           </div>
+                           <br>
+                           <button id = "btn" type="submit">Sign Up</button>
+                       </form>                        
+                       <!-- <button id = "btn" class="toggle-btn" onclick="flipCard()">Log In</button> -->
+                   </div>
+               </div>
+           </div>
+       </div>    
+   </div>        
+</div>
+<script src = "login.js"></script>
+</body>
+</html>
