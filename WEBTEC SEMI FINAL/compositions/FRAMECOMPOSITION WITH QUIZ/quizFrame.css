@@ -1,0 +1,147 @@
+body {
+  margin: 0; /* Remove default margin */
+  display: flex;
+  align-items: center; /* Center vertically */
+
+  font-family: Arial, sans-serif;
+  background-color: white; /* Purple background */
+  color: black;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+
+}
+
+.quiz-box {
+  width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border: 2px; /* Gradient border simulation */
+  border-radius: 15px;
+  padding: 100px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  justify-content: center;
+}
+
+.question-box {
+  padding: 20px;
+  background: linear-gradient(90deg, #2cabe3, #38ca79);
+  border-radius: 10px;
+  margin-bottom: 45px;
+  text-align: left;
+  color: white;
+}
+
+.question {
+  font-size: 18px;
+  font-weight: bold;
+  
+
+  padding: 0px;
+}
+
+.options-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+}
+
+.option {
+  padding: 15px 20px;
+  background-color: white; /* Dark purple for options */
+  border: 2px solid #2cabe3;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.option:hover {
+ /* Lighter purple on hover */
+  transform: scale(1.05);
+}
+
+
+
+
+.correct {
+  background-color: #4caf50; /* Green for correct answer */
+  color: white;
+}
+
+.incorrect {
+  background-color: #f44336; /* Red for incorrect answer */
+  color: white;
+}
+
+.next-button {
+  display: block;
+  margin-top: 20px;
+  margin-left: 508px; /* Adjust as needed */
+  margin-right: auto; /* Centers horizontally */
+  padding: 10px 30px;
+  font-size: 16px;
+  background: linear-gradient(90deg, #2cabe3, #38ca79); /* Corrected property */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s; /* Use 'background' for transitions */
+}
+
+.next-button:hover {
+  transform: scale(1.05);}
+
+  .result-container{
+    display: none;
+    background: white;
+      padding: 30px 50px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+  }
+
+  .result-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .result-container p {
+    font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+  }
+
+
+  .result-container button
+  {
+    display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(to right,  #2cabe3, #38ca79);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s; /* Use 'background' for transitions */
+    }
+
+  .result-container button:hover{
+    transform: scale(1.05);
+    transition: background 0.3s ease, transform 0.2s; /* Use 'background' for transitions */
+
+  }
+
+  #gif-container {
+    display: flex;
+    justify-content: center; /* Centers the GIF horizontally */
+    align-items: center; /* Centers the GIF vertically (if you want it centered vertically) */
+    height: 100vh; /* Optional: makes the container take the full height of the viewport */
+  }
+  
+  #gif-container img {
+    max-width: 80%; /* Sets a maximum width, adjust to your desired size */
+    height: auto; /* Maintains aspect ratio */
+  }
