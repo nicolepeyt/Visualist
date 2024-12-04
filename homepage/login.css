@@ -120,7 +120,7 @@
   
   .login-form-container.active {
     border: 1px solid white;
-width: 23%;
+    width: 21%;
     height: 50%;
       display: block;
       transform: translate(-50%, -50%); /* Slide to center */
