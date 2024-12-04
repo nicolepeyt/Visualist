@@ -238,6 +238,7 @@
   .card-form .form-content h2 {
       position: relative;
       top: -5px;
+      right:18px;
       font-size: 30px;
       text-align: center;
       color: black;
