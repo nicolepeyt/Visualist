@@ -14,28 +14,28 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 .section__container {
-  /* background-color: white; */
+  background-color: white;
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 1rem;
 }
 
 .section__header {
-  /* margin-bottom: 5px; */
+  margin-bottom: 5px;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #000;
+  color: var(--text-dark);
   text-align: center;
 }
 
 .section__description {
-  /* max-width: 600px; */
-  font-size: 1.4rem;
+  max-width: 600px;
   margin-inline: auto;
-  color: #000;
+  color: var(--text-light);
   text-align: center;
 }
 
@@ -78,17 +78,15 @@ ul {
   list-style: none;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  box-sizing: border-box;
+html,
+body {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "DM Sans", sans-serif;
 }
+
 
 /* NAVBAR PART */
 .navbar {
@@ -119,10 +117,31 @@ body {
 
 }
 
+/* Default menu link style */
+.navbar .menu-list li a {
+  text-decoration: none; /* Remove default underline */
+  padding: 10px;
+  font-weight: 700;
+  color: #333; /* Normal text color */
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+/* Underline for the active menu item */
+.navbar .menu-list li a.active {
+  color: #2cabe3; /* Change text color to indicate it's active */
+  border-bottom: 2px solid #2cabe3; /* Add underline */
+}
+
 .navbar .content{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* Prevent underline on hover for the "Logout" button (with .btnn class) */
+.navbar .menu-list li a.btnn:hover {
+  text-decoration: none; /* Disable underline on hover */
+  border-bottom: none; /* Ensure no underline appears */
 }
 
 /* When in banner (top of page), change to white */
@@ -162,7 +181,8 @@ body {
 
 .menu-list li a {
   color: #000;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 600;
   text-decoration: none;  /* Ensure no default underline */
   transition: color 0.3s ease;
   position: relative; /* Ensures the pseudo-element is positioned relative to the link */
@@ -207,8 +227,6 @@ body {
  
 /* Both Login and Signup buttons */
 .btnn {
-  background-color: #2cabe3 !important;
-  color: white !important;
   display: inline-flex;  
   padding: 12px 20px;
   font-size: 16px;
@@ -244,7 +262,7 @@ body {
 /* Make buttons stand out in the menu */
 .menu-list li a.btnn {
   /* border: 1px solid transparent; */
-  font-size: 25px;
+  font-size: 16px;
   /* text-transform: uppercase; */
   letter-spacing: 1px;
   display: flex;
@@ -254,29 +272,109 @@ body {
 .menu-list li a.btnn:hover {
   opacity: 0.9;
 }
-/* 
+.navbar.scrolled .menu-list li a {
+  color: #2cabe3; /* Blue text when scrolled */
+}
+/* Both Login and Signup buttons */
+.btnn {
+  display: inline-flex;  /* Ensures buttons align horizontally */
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 100px !important;  
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  white-space: nowrap; /* Prevents breaking the button text into multiple lines */
+}
+
+/* Login Button */
+.login-btn {
+  background-color: #2cabe3 !important;  /* Blue background */
+  color: white !important;               /* White text */
+  padding: 10px 20px;
+  border: 2px solid #2cabe3 !important;  /* Blue border */
+  border-radius: 100px !important;         /* Rounded corners */
+  font-size: 16px !important;            /* Font size */
+  text-decoration: none;                 /* Remove underline */
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s !important; /* Transition */
+}
+
+/* Hover effect */
+.login-btn:hover {
+  background-color: white;   /* White background when hovered */
+  color: #2cabe3;             /* Blue text when hovered */
+  border: 2px solid #2cabe3; /* Blue border on hover */
+}
+/* Sign Up Button */
+.signup-btn {
+  background-color: white;
+  color: #2cabe3;
+  /* padding: 10px 20px; */
+  border: 2px solid transparent;  /* Initially no border */
+  border-radius: 4px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  /* border: 2px solid #2cabe3; */
+}
+/* When the button has a blue border */
+.signup-btn.scroll-active {
+  border: 2px solid #2cabe3; /* Blue border when scrolling */
+}
+
+.signup-btn.scr {
+  box-shadow: 0 0 15px rgba(136, 153, 166, .2), 0 0 3px 1px rgba(136, 153, 166, .15);
+  color: #2cabe3;
+  border-color: #2cabe3;
+  background-color: white;
+  transition: border-color .2s;
+}
+
+/* Icon Style */
+.fas {
+  font-size: 20px;
+}
+
+/* Make buttons stand out in the menu */
+.menu-list li a.btnn {
+  /* border: 1px solid transparent; */
+  font-size: 16px;
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-list li a.btnn:hover {
+  opacity: 0.9;
+}
+
 .banner{
-  background: url("ratedpic-kyot.jpg");
+  background: url("pics/ratedpic-kyot.jpg");
   height: 100vh;
   transition: opacity 2s ease-in-out;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  animation: slideBackground 30s linear infinite; /* Apply the sliding animation 
+  animation: slideBackground 30s linear infinite; /* Apply the sliding animation */
 }
 @keyframes slideBackground {
   0% {
-    background-image: url("ratedpic-kyot.jpg");
+    background-image: url("pics/background.png");
   }
   33% {
-    background-image: url("ratedpic-jmr.jpg"); 
+    background-image: url("pics/ratedpic-faith.png"); 
   }
   66% {
-    background-image: url("background.png"); 
+    background-image: url("pics/ratedpic-nfda.png");
   }
   100% {
-    background-image: url("ratedpic-shyna.jpg"); 
-} */
+    background-image: url("pics/ratedpic-jmr.jpg"); 
+  }
+}
 .about{
   padding: 30px 0;
 }
@@ -312,10 +410,20 @@ body {
 }
 
 .destination__card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
   border-radius: 1.5rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
-
+/* .destination__card:hover {
+  transform: translateY(-5px); /* Move card up slightly 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Make shadow more intense 
+} */
+.destination__card:hover img {
+  transform: scale(1.05); /* Slightly zoom the image */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Make shadow more intense */
+}
 .destination__card__details {
   padding: 1rem;
   display: flex;
@@ -590,7 +698,7 @@ body {
 }
 
 footer {
-  background-color: white;
+  background-color: var(--extra-light);
 }
 
 .footer__container {
@@ -611,14 +719,14 @@ footer {
   flex-wrap: wrap;
 }
 
-/* .footer__socials a {
+.footer__socials a {
   display: inline-block;
   padding: 7px 10px;
   font-size: 1.25rem;
   color: var(--white);
   background-color: var(--primary-color);
   border-radius: 100%;
-} */
+}
 
 .footer__socials a:hover {
   background-color: var(--primary-color-dark);
@@ -678,6 +786,37 @@ footer {
   font-size: 0.9rem;
   color: var(--text-light);
   text-align: center;
+}
+
+@media (width > 540px) {
+  .destination__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .journey__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .showcase__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .banner__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .discover__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__col:last-child {
+    grid-area: 2/1/3/2;
+  }
 }
 
 @media (width > 768px) {
@@ -1011,123 +1150,6 @@ h1 .highlight {
 /* END OF MUTLIMEDIA FAIR USE */
 
 
-header {
-  height: 100vh;
-  background-image: linear-gradient(
-      rgba(45, 92, 132, 0.5),
-      rgba(45, 92, 132, 0.5)
-    ),
-    url("ratedpic-nikol.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-header .section__container {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  color: var(--extra-light);
-}
-
-.header__content h1 {
-  font-size: 5rem;
-  font-weight: 400;
-  line-height: 5rem;
-}
-
-.header__content p {
-  text-align: center;
-}
-
-.header__content button {
-  padding: 1rem 2rem;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--primary-color);
-  color: var(--extra-light);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.header__content button:hover {
-  background-color: var(--primary-color-dark);
-}
-
-
-.popular__grid {
-  margin-top: 2rem;
-  display: grid;
-  gap: 1rem;
-}
-
-.popular__card {
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-}
-
-.popular__card:hover {
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-}
-
-.popular__card img {
-  margin-bottom: 1rem;
-  border-radius: 10px;
-}
-
-.popular__card p {
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  color: var(--text-light);
-}
-
-.popular__card h4 {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-dark);
-}
-
-.popular__card > div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.popular__card .rating {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--text-light);
-}
-
-.popular__card .rating span {
-  font-size: 1.2rem;
-  color: goldenrod;
-}
-
-.popular__card .price {
-  color: var(--text-light);
-}
-
-.popular__card .price span {
-  font-weight: 600;
-  color: var(--text-dark);
-}
 
 .nav-menu {
   list-style: none;
@@ -1152,8 +1174,8 @@ header .section__container {
 }
 
 .nav-menu a:hover {
-  background-color: #0056b3;
-  color: #fff;
+  background-color: white;
+  color: black;
 }
 
 /* Dropdown Styles */
@@ -1161,7 +1183,7 @@ header .section__container {
   display: none;
   position: absolute;
   top: 100%; /* Aligns dropdown below the parent link */
-  left: 0;
+  left: -60px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -1185,7 +1207,7 @@ header .section__container {
 }
 
 .dropdown-menu li a:hover {
-  background-color: #f0f0f0;
+  background-color: white;
   color: #0056b3;
 }
 

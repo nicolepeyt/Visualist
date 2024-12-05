@@ -18,7 +18,7 @@ let savedPass = '';
 
 // Show login form after scrolling past a certain point
 window.addEventListener('scroll', () => {
-        if (!isLoggedIn && window.scrollY > 800) { // Only if not logged in
+        if (!isLoggedIn && window.scrollY > 2500) { // Only if not logged in
         overlay.classList.add('active');
         loginForm.style.display = 'block';
         setTimeout(() => {
@@ -49,7 +49,7 @@ document.getElementById('loginFormElement').addEventListener('submit', (event) =
         overlay.classList.remove('active'); // Hide overlay
         loginForm.classList.remove('active'); // Hide login form
         alert('You are now logged in!'); // Simulate login success
-        window.location.href = '/homepage/homepage.html';
+        window.location.href = '/Visualist/LandingPage/LandingPage.html';
     } 
     else {
         // Display error message if login fails

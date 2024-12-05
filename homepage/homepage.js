@@ -117,7 +117,7 @@ let savedPass = '';
 
 // Show login form after scrolling past a certain point
 window.addEventListener('scroll', () => { 
-        if (!isLoggedIn && window.scrollY > 400) { // Only if not logged in
+        if (!isLoggedIn && window.scrollY > 1500) { // Only if not logged in
         overlay.classList.add('active');
         loginForm.style.display = 'block';
         setTimeout(() => {

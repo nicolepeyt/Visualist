@@ -1,0 +1,409 @@
+body{
+    background-color: white;
+    color: #333;
+      margin: auto;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+  }
+  body p{
+    text-align: justify;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    top: 100px;
+    }
+    .header-image img {
+      border-radius: 5px;
+      width: 100%;
+      height: auto;
+      bottom: 50px;
+    }
+  
+  
+  
+  
+  
+    @keyframes rotateAndSlideIn {
+      0% {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+  }
+  
+  
+  .highlight {
+    background: linear-gradient(to right, #2cabe3, #38ca79); /* What is Rule of Thirds */
+    -webkit-background-clip: text; /* Clip the background to text */
+      -webkit-text-fill-color: transparent; /* Make the text transparent */
+    font-weight: bold;
+  }
+  
+  
+    .overlay-text{
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      padding: 20px;
+      margin-bottom: 5px;
+      text-align: center;
+      overflow: hidden; /* Ensure animation stays within bounds */
+      position: relative; /* Important for animation positioning */
+      transform: translateY(100%) rotate(0deg); /* Start below with no rotation */
+      animation: rotateAndSlideIn 2s ease-out forwards; /* Apply animation */
+      top: -10px;
+      font-size: 100px;
+      background: linear-gradient(to right, #2cabe3, #38ca79); /* What is Rule of Thirds */
+      -webkit-background-clip: text; /* Clip the background to text */
+        -webkit-text-fill-color: transparent; /* Make the text transparent */
+      
+      
+    }
+  
+    .topics {
+      position: relative;
+      top: -93px;
+      border-radius: 5px;
+      margin-top: -5px;
+      background: #161616;
+      text-align: center;
+      padding: 5px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: white;
+    }
+    
+    .content {
+      align-items: center;
+      text-align: left;
+      position: relative;
+      top: -90px;
+      padding: 20px;
+    }
+    
+  
+    .color-models h2 {
+      text-align: right;
+      font-size: 300%;
+      margin-bottom: 10px;
+      margin-top: 13%;
+    }
+
+
+.essential {
+    text-align: center;
+      font-size: 220%;
+      margin-top: -22%;
+}
+
+    .color-models {
+      text-align: left;
+      position: relative;
+      top: -210px;
+      padding: 20px;
+    }
+  
+    .color-models p{
+      line-height: 1.8rem;
+      text-align: left;
+    }
+    
+  
+    .content h2 {
+      text-align: left;
+      font-size: 300%;
+      margin-bottom: 10px;
+      margin-top: 13%;
+    }
+    
+    
+   
+    
+    .content p {
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin: 10px 0;
+    }
+  
+    .color-container {
+      display: flex;
+      flex-direction: row; /* Place items side by side */
+      align-items: center;
+      gap: 20px; /* Add space between the image and text */
+      max-width: 1500px;
+      margin-top: 5%;
+      background: white;
+      margin-left: 3% ;
+  
+    }
+  
+    .color-containeremotions {
+      display: flex;
+      flex-direction: row; /* Align items side by side */
+      align-items: center; /* Align vertically */
+      gap: 30px; /* Adjust space between the image and text */
+      max-width: 1200px; /* Limit the width for better readability */
+      padding: 20px; /* Add inner padding for better spacing */
+      margin-top: -100px;
+      margin-left: 2%;
+      width: 200%;
+  }
+  
+  
+  
+    
+    .color-container img {
+      width: 350px;
+      height: auto;
+      border-radius: 10px;
+      margin-left: 1%;
+    }
+  
+    .color-containeremotions img {
+      width: 500px; /* Maintain consistent size */
+      height: auto;
+      border-radius: 10px; /* Rounded corners */
+      align-items: left;
+      
+  }
+  
+    .color-descriptionemotions {
+      max-width: 2500px; /* Limit the text width */
+      text-align: right; /* Align text to the left for readability */
+  
+  }
+  
+  
+    .color-description  {
+      max-width: 400px;
+      margin-right: 10%;
+    }
+  
+    
+   
+  
+    .color-description  h2 {
+      margin-top: 0;
+      color: #333;
+      font-size: 300%;
+      
+    }
+  
+ 
+  
+  .color-description p {
+    color: #333;
+      line-height: 1.6;
+      margin-top: -7%;
+      padding: 0%;
+      margin-right: 10px;
+  }
+  
+ 
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    .colorcmyk-container {
+      display: flex;
+      flex-direction: row; /* Place items side by side */
+      align-items: center;
+      gap: 20px; /* Add space between the image and text */
+      max-width: 1500px;
+   
+      background: white;
+      margin-top: 2%;
+      margin-left: 3% ;
+  
+    }
+  
+  
+  
+    .colorcmyk-container h2{
+      text-align: right;
+      font-size: 200%;
+     
+    }
+  
+    .colorcmyk-container img {
+      width: 350px;
+      height: auto;
+      border-radius: 10px;
+      margin-left: 1%;
+    }
+  
+    .colorcmyk-description  {
+      margin-top: 8%;
+    
+    }
+  
+    .colorcmyk-description  h2 {
+      margin-top: -2%;
+      color: #333;
+      font-size: 300%;
+      text-align: right;
+      margin-right: 16%;
+    }
+  
+    .colorcmyk-description p {
+      color: #555;
+      line-height: 1.6;
+      margin-top: -17%;
+      padding: 12%;
+    }
+  
+    .colorcmyk-container h2{
+      text-align: right;
+      font-size: 200%;
+     
+    }
+  
+    .colorcmyk-container img {
+      width: 350px;
+      height: auto;
+      border-radius: 10px;
+      margin-left: 1%;
+    }
+  
+    .colorsecondary-description  {
+      margin-top: 8%;
+    
+    }
+  
+    .colorcmyk-description  h2 {
+      margin-top: -2%;
+      color: #333;
+      font-size: 300%;
+      text-align: right;
+      margin-right: 16%;
+    }
+  
+    .colorsecondary-description p {
+      color: #555;
+      line-height: 1.6;
+      margin-top: -30%;
+      padding: 12%;
+    }
+  
+   .colorsecondary-description h2{
+    color: #555;
+      line-height: 1.6;
+      margin-top: -17%;
+      padding: 12%;
+      font-size: 300%;
+      text-align: left;
+   }
+  
+  
+   
+      
+      @keyframes slideInFromLeft {
+        0% {
+          transform: translateX(-100%); /* Start off-screen */
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    
+      .in-view {
+        animation: slideInFromLeft 2s ease-out forwards;
+      
+      }
+      
+      @keyframes slideInFromRight {
+        0% {
+          transform: translateX(100%); /* Start off-screen */
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    
+      .in-viewright {
+        animation: slideInFromRight 2s ease-out forwards;
+      
+      }
+  
+      .in-viewbelow {
+        animation: rotateAndSlideIn 2s ease-out forwards;
+      
+      }
+    
+      
+    @keyframes rotateAndSlideIn {
+      0% {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+  }
+  .quiz-button {
+    background: linear-gradient(45deg, #2cabe3, #38ca79);
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 440px;
+  }
+  
+  .quiz-button:hover {
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+    transform: translateY(-2px);
+  }
+  
+  .quiz-button:active {
+    transform: translateY(0);
+  }
+  
+  .quiz-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(29, 202, 194);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .quiz-button:hover::after {
+    opacity: 1;
+  }
+  
