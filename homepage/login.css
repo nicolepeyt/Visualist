@@ -98,104 +98,91 @@
       overflow:hidden;
   }
   
-  /* Default styles (for larger screens like desktops) */
-.login-form-container {
-    font-family: 'Open-sans', sans-serif;
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 150%); /* Start from below */
-    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1), opacity 1s ease; /* Longer duration and smooth easing */
-    opacity: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 300px;
-    z-index: 1000;
-    border-radius: 10px;
-}
-
-.login-form-container.active {
+  
+  /* Login form styles */
+  .login-form-container {
+      font-family: 'Open-sans',sans-serif;
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 150%); /* Start from below */
+      transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1), opacity 1s ease; /* Longer duration and smooth easing */
+      opacity: 0;
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 300px;
+      z-index: 1000;
+      border-radius: 10px;
+  
+  }
+  
+  .login-form-container.active {
     border: 1px solid white;
     width: 21%;
-}
-
-/* Large screen (Desktops) */
-@media (min-width: 1024px) {
-    .login-form-container {
-        width: 400px; /* Adjust width for larger screens */
-    }
-
-    .card-form {
-        width: 350px;
-    }
-}
-
-/* Tablets and smaller devices (portrait and landscape) */
-@media (max-width: 768px) {
-    .login-form-container {
-        width: 70%; /* Make the form wider for smaller screens */
-        padding: 20px;
-    }
-
-    .card-form {
-        width: 100%;
-    }
-
-    .logo1 {
-        font-size: 1.2em; /* Adjust logo size for smaller screens */
-    }
-
-    #logo {
-        width: 50%; /* Adjust logo size */
-    }
-}
-
-/* Smartphones (portrait and landscape) */
-@media (max-width: 480px) {
-    .login-form-container {
-        width: 85%; /* Form takes up more width on smaller screens */
-        padding: 15px;
-    }
-
-    .card-form {
-        width: 100%;
-    }
-
-    #logo {
-        width: 60%; /* Make the logo a bit smaller */
-    }
-
-    .logo1 {
-        font-size: 1em; /* Make the text logo smaller */
-    }
-
-    .form-card-container {
-        width: 100%; /* Ensures container fits well on small screens */
-    }
-}
-
-/* Extra small devices (like some mobile phones) */
-@media (max-width: 320px) {
-    .login-form-container {
-        width: 95%; /* Almost full-width on very small screens */
-        padding: 10px;
-    }
-
-    .card-form {
-        width: 100%;
-    }
-
-    .logo1 {
-        font-size: 0.9em; /* Make the text logo smaller for tiny screens */
-    }
-
-    #logo {
-        width: 50%; /* Keep the logo slightly smaller */
-    }
-}
-
+    height: 50%;
+      display: block;
+      transform: translate(-50%, -50%); /* Slide to center */
+      opacity: 1; /* Fully visible */
+      box-shadow: 
+            -10px 0px 15px -5px rgba(44, 171, 227, 0.7), /* Left shadow */
+            10px 0px 15px -5px rgba(56, 202, 121, 0.7);  /* Right shadow */
+  }
+  
+  .login-form-container h2 {
+      margin: 0 0 15px;
+      text-align: center;
+  }
+  
+  .overlaying {
+    background: transparent;
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      z-index: 999;
+  }
+  
+  .overlaying.active {
+      display: block;
+  }
+  
+  .password-container {
+    background-color: transparent;
+      position: relative;
+      width: 120%;
+  }
+  
+  #password {
+    background-color: transparent;
+      width: 100%;
+      padding-right: 10px; /* Add some space on the right side for the icon */
+  }
+  .password-container input[type = "checkbox"]{
+      cursor: pointer;
+  }
+  
+  .password-container input {
+    background-color: transparent;
+      width: 100%;
+      padding-right: 30px; /* Add padding for the icon */
+  
+  }
+  
+  .password-container .toggle-password {
+      position: absolute;
+      top: 25%;
+      right: 18%;
+      cursor: pointer;
+      font-size: 18px;
+  
+  }
+  
   /* Button styles */
   .card-form .form-content #btn {
       position: relative;
@@ -266,13 +253,13 @@
   .card-form .form-content input {
       caret-color: #00c6ff; /* Change the blinking caret to match your design */
   }
-
+  
   html,
-body {
+  body {
   scroll-behavior: smooth;
-}
-
-body {
+  }
+  
+  body {
   font-family: "DM Sans", sans-serif;
   height: 900vh;
-}
+  }
