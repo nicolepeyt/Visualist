@@ -4,7 +4,18 @@ let savedUser = '';
 let savedPass = '';
 
 
-
+function login(){
+    if (!isLoggedIn) { // Only if not logged in
+        overlay.classList.add('active');
+        loginForm.style.display = 'block';
+        setTimeout(() => {
+            document.body.classList.add('no-scroll');
+            loginForm.classList.add('active');
+        }, 50);// Small delay to ensure animation 
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
+    }
+}
 
 // Elements
     const overlay = document.getElementById('overlay');
@@ -69,7 +80,7 @@ document.getElementById('loginFormElement').addEventListener('submit', (event) =
     savedUser = createUsername;
     savedPass = createPassword;
     
-    alert('Account Created!, Please proceed to Log In');
+    alert('Account Created! Please proceed to Log In');
     flipCard();
     // accountCreated.textContent = 'Account Created!';
     // accountCreated1.textContent = 'Please proceed to Log In';
