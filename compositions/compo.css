@@ -1368,6 +1368,7 @@ header .section__container {
 }
 
   .text-content p {
+    font-weight: 500;
     font-size: 1rem;
     color: #555;
     margin: 0 0 20px 0;
