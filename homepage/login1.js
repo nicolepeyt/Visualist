@@ -6,7 +6,7 @@ let savedPass = '';
 
 
 
-// Elements
+
     const overlay = document.getElementById('overlay');
     const loginForm = document.getElementById('loginForm');
     // const errorMessage = document.createElement('p');
@@ -16,18 +16,19 @@ let savedPass = '';
     // const accountCreated1 = document.createElement('p');
     // accountCreated1.style.color = 'blue';
 
-// Show login form after scrolling past a certain point
 
-        if (!isLoggedIn) { // Only if not logged in
+// Show login form after scrolling past a certain point
+        if (!isLoggedIn) { 
         overlay.classList.add('active');
         loginForm.style.display = 'block';
         setTimeout(() => {
             document.body.classList.add('no-scroll');
-            loginForm.classList.add('active');
+            
         }, 50);// Small delay to ensure animation 
         document.getElementById('username').value = '';
         document.getElementById('password').value = '';
-    };
+    }
+;
 
 // Handle login form submission
 document.getElementById('loginFormElement').addEventListener('submit', (event) => {
@@ -68,7 +69,7 @@ document.getElementById('loginFormElement').addEventListener('submit', (event) =
     savedUser = createUsername;
     savedPass = createPassword;
     
-    alert('Account Created!, Please proceed to Log In');
+    alert('Account Created! Please proceed to Log In');
     flipCard();
     // accountCreated.textContent = 'Account Created!';
     // accountCreated1.textContent = 'Please proceed to Log In';
