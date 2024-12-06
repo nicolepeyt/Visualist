@@ -117,11 +117,6 @@ body {
 
 }
 
-.navbar.sticky .menu-list li a {
- color: black;
- font-weight: 800;
-}
-
 /* Default menu link style */
 .navbar .menu-list li a {
   text-decoration: none; /* Remove default underline */
