@@ -26,6 +26,7 @@
       width: 40%;
     }
     .logo1{
+        font-weight: 700;
       position: absolute;
       font-size: 45px;
          left: 85px;
