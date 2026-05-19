@@ -6,31 +6,14 @@
     <title>Rule Of Thirds</title>
     <link rel = "stylesheet" href = "ROT.css"/>
     <script src = "ROT.js" ></script>
-<body>
-  <nav class="navbar">
-    <div class="content">
-      <div class="logo">
-        <a href="#">Visualist</a>
-      </div>
-      <ul class="menu-list">
-        <div class="icon cancel-btn">
-          <i class="fas fa-times"></i>
-        </div>
-        <li><a href="#home" id="homeMenu">Home</a></li>
-        <li><a href="#fundamentals" id="fundamentalsMenu">Lessons</a></li>
-        <li><a href="#intro" id="aboutMenu">About Us</a></li>
-        <li><a href="#logout" class="btnn" id="logoutMenu">Logout</a></li>
-      </ul>
-      <div class="icon menu-btn">
-        <i class="fas fa-bars"></i>
-      </div>
-    </div>
-  </nav>
+    <link rel="stylesheet" href="../../../shared/lesson-back.css">
+</head>
+<body class="lesson-area-photography lesson-rule-thirds">
   <section class="section__container discover__container">
     
     <div class = "container">
       <div class = "overlay-text">
-        <h1>THE RULE OF THIRDS</h1><br>
+        <h1>THE RULE OF THIRDS</h1>
     
       </div>
       
@@ -331,49 +314,6 @@ Using these intersections helps balance the subject with surrounding negative sp
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
-  <script>
-          document.addEventListener('DOMContentLoaded', function() {
-    const menuItems = document.querySelectorAll('.menu-list li a');
-
-    // Function to remove active class from all menu items
-    function removeActiveClasses() {
-      menuItems.forEach(function(item) {
-        item.classList.remove('active');
-      });
-    }
-
-    // Loop through each menu item and add a click event listener
-    menuItems.forEach(function(item) {
-      item.addEventListener('click', function() {
-        // Remove active class from all menu items
-        removeActiveClasses();
-
-        // Add the active class to the clicked item
-        this.classList.add('active');
-      });
-    });
-
-    // Check if a menu item should be active when the page loads
-    if (window.location.hash) {
-      const activeMenu = document.querySelector(`.menu-list li a[href="${window.location.hash}"]`);
-      if (activeMenu) {
-        activeMenu.classList.add('active');
-      }
-    }
-  });
-
-    window.addEventListener('scroll', function () {
-    const nav = document.querySelector('nav');
-    const navHeader = document.querySelector('.nav__header');
-
-    if (window.scrollY > 0) {
-      nav.classList.add('sticky');
-      navHeader.classList.add('sticky');
-    } else {
-      nav.classList.remove('sticky');
-      navHeader.classList.remove('sticky');
-    }
-  });
-  </script>
+  <script src="../../../shared/lesson-back.js"></script>
 </body>
 </html>

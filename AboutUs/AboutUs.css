@@ -154,6 +154,7 @@
 /* Intro Section */
 .intro {
   text-align: center;
+  padding-top: 120px;
   margin-bottom: 30px;  /* Adds space between the text and cards */
 }
 

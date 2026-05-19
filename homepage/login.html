@@ -11,27 +11,25 @@
    <div class="overlaying" id="overlay"></div>
 
    <!-- Login Form -->
-   <div class="login-form-container" id="loginForm">
+   <div class="login-form-container" id="loginForm" role="dialog" aria-modal="true" aria-labelledby="authTitle">
     <!-- <img src="logo.png" alt="" id = "logo" > -->
     <div class = "logo1"><span id = "visual">VISUALIST</span></div>
        <div class = "form-card-container">
            <div class = "card-form">
                <div class = "card-front">
                    <div class = "form-content">
-                       <h2>Log In</h2> 
+                       <h2 id="authTitle">Log In</h2>
                        <form id="loginFormElement">                             
                            <label for="username">Username: </label>
                            <input type="text" id="username" name="username" required>
-                           <br>
                            <label for="password">Password: </label>
                            <div class="password-container">
                                <input type="password" id="password" name="password" required oninput="checkPasswordInput(this, 'login')">
                                <span class="toggle-password" id = "toggle-pass" onclick="togglePasswordVisibility()" style="display: none;">👁️</span>
                            </div>
-                           <br>
-                           <button id = "btn" type="submit">Log In</button>
+                           <button class="auth-btn" type="submit">Log In</button>
                        </form>                        
-                       <button id = "btn" class="toggle-btn" onclick="flipCard()">Sign Up</button>
+                       <button class="auth-btn auth-btn-secondary toggle-btn" type="button" onclick="flipCard()">Sign Up</button>
                    </div>
                </div>
                <div class = "card-back">
@@ -40,22 +38,20 @@
                        <form id="signupFormElement">                             
                            <label for="create-user">Username: </label>
                            <input type="text" id="create-user" name="create-user" required>
-                           <br>
                            <label for="create-pass">Password: </label>
                            <div class="password-container">
                                <input type="password" id="create-pass" name="create-pass" required oninput="checkPasswordInput(this, 'signup')">
                                <span class="toggle-password" id = "toggle-pass" onclick="togglePasswordVisibilitySignup()" style="display: none;">👁️</span>
                            </div>
-                           <br>
-                           <button id = "btn" type="submit">Sign Up</button>
+                           <button class="auth-btn" type="submit">Sign Up</button>
                        </form>                        
-                       <!-- <button id = "btn" class="toggle-btn" onclick="flipCard()">Log In</button> -->
+                       <button class="auth-btn auth-btn-secondary toggle-btn" type="button" onclick="flipCard()">Log In</button>
                    </div>
                </div>
            </div>
        </div>    
-   </div>        
-</div>
+   </div>
+   <div class="auth-toast" id="authToast" role="status" aria-live="polite"></div>
 <script src = "login1.js"></script>
 </body>
 </html>

@@ -1,0 +1,245 @@
+.lesson-back-button {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1200;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 74px;
+  height: 36px;
+  min-height: 36px;
+  padding: 0 13px;
+  font-family: "Poppins", "Open Sans", Arial, sans-serif;
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0;
+  background: linear-gradient(to right, #2cabe3, #38ca79);
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(10, 10, 10, 0.14);
+  appearance: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lesson-back-button:hover,
+.lesson-back-button:focus-visible {
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(44, 171, 227, 0.24);
+}
+
+body {
+  display: block !important;
+  align-items: flex-start !important;
+  min-width: 0 !important;
+}
+
+.container {
+  top: 0 !important;
+  margin-top: 54px !important;
+  padding-top: 8px !important;
+  overflow: visible !important;
+}
+
+.header-image {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.header-image img {
+  padding-top: 0 !important;
+}
+
+.overlay-text {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+body:is(.lesson-area-multimedia, .lesson-area-videography) .content,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .color-models,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .content-container1,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .color-container,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .colorcmyk-container,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .colorkerning-container,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .colortracking-container,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .color-containeremotions,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .color-containerat,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .color-containersig,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .wrap-tip,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .wrap-challenge,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .tips,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .challenge,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .keydif,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .highlight1,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .some,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .seven,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .line,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .line1,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .line2 {
+  top: auto !important;
+}
+
+body:is(.lesson-area-multimedia, .lesson-area-videography) .content,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .color-models {
+  margin-top: 22px !important;
+  padding: clamp(14px, 3vw, 24px) !important;
+}
+
+body:is(.lesson-area-multimedia, .lesson-area-videography) .content h2,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .color-models h2,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .keydif h2,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .highlight1 h2,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .some h2,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .seven h2 {
+  margin-top: 0 !important;
+  margin-bottom: 18px !important;
+}
+
+body:is(.lesson-area-multimedia, .lesson-area-videography) .color-container,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .colorcmyk-container,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .colorkerning-container,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .colortracking-container,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .color-containeremotions,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .color-containerat,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .color-containersig,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .content-container1,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .wrap-tip,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .wrap-challenge {
+  margin-top: clamp(28px, 4vw, 48px) !important;
+  margin-bottom: clamp(20px, 3vw, 36px) !important;
+}
+
+body:is(.lesson-area-multimedia, .lesson-area-videography) .line,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .line1,
+body:is(.lesson-area-multimedia, .lesson-area-videography) .line2 {
+  margin-top: clamp(24px, 4vw, 44px) !important;
+  margin-bottom: clamp(24px, 4vw, 44px) !important;
+}
+
+.quiz-button {
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: max-content !important;
+  max-width: calc(100vw - 48px) !important;
+  min-height: 48px !important;
+  margin: clamp(28px, 4vw, 44px) auto clamp(36px, 5vw, 64px) !important;
+  white-space: normal !important;
+}
+
+.quiz-button,
+.quiz-button + * {
+  position: relative !important;
+}
+
+.lesson-quiz-action {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.container > div:has(> .quiz-button) {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 560px) {
+  .container {
+    margin-top: 48px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .content,
+  .color-models {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .quiz-button {
+    width: min(100%, 220px) !important;
+  }
+}
+
+body.lesson-rule-thirds {
+  overflow-x: hidden !important;
+}
+
+body.lesson-rule-thirds .lesson-back-button {
+  top: 12px;
+  left: 12px;
+}
+
+body.lesson-rule-thirds .discover__container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  padding-top: 3.75rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+body.lesson-rule-thirds .container {
+  width: min(100%, 1000px) !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding: 0 1rem !important;
+  overflow: visible !important;
+}
+
+body.lesson-rule-thirds .header-image {
+  width: 100% !important;
+  padding-left: 0 !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+body.lesson-rule-thirds .header-image img {
+  display: block !important;
+  width: min(900px, 100%) !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  border-radius: 8px;
+}
+
+body.lesson-rule-thirds .overlay-text {
+  margin: 0 0 1rem !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+body.lesson-rule-thirds .overlay-text h1 {
+  margin: 0 !important;
+  font-size: clamp(2.5rem, 7vw, 5rem) !important;
+  line-height: 1.05 !important;
+  letter-spacing: 0 !important;
+}
+
+body.lesson-rule-thirds .topics {
+  top: auto !important;
+  margin-top: 0.75rem !important;
+}
+
+@media (max-width: 760px) {
+  body.lesson-rule-thirds .lesson-back-button {
+    top: 12px;
+  }
+
+  body.lesson-rule-thirds .discover__container {
+    padding-top: 3.5rem !important;
+  }
+}

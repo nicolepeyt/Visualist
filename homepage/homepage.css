@@ -1192,3 +1192,167 @@ h1 .highlight {
     width: 100%; /* Full width on smaller screens */
   }
 }
+
+/* Responsive fixes for the homepage */
+.navbar {
+  z-index: 100;
+}
+
+.banner {
+  min-height: 520px;
+}
+
+.destination__card img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .navbar .content {
+    padding: 0 18px;
+  }
+
+  .navbar .logo a {
+    padding-left: 0;
+    font-size: 2rem;
+  }
+
+  .icon {
+    display: block;
+    color: #1f2937;
+    font-size: 1.7rem;
+  }
+
+  .menu-btn::before {
+    content: "Menu";
+    font-size: 0.95rem;
+    font-weight: 800;
+  }
+
+  .cancel-btn::before {
+    content: "Close";
+    font-size: 0.95rem;
+    font-weight: 800;
+  }
+
+  .menu-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(82vw, 320px);
+    padding: 86px 24px 24px;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    box-shadow: -12px 0 35px rgba(10, 10, 10, 0.14);
+    transform: translateX(110%);
+    transition: transform 0.25s ease;
+    z-index: 101;
+  }
+
+  .menu-list.open {
+    transform: translateX(0);
+  }
+
+  .menu-list .cancel-btn {
+    display: block;
+    color: #1f2937;
+  }
+
+  .menu-list li {
+    margin-left: 0;
+  }
+
+  .navbar .menu-list li a,
+  .menu-list li a.btnn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .content-section {
+    padding: 48px 0;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .checkbox-container {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .timeline {
+    padding-left: 32px;
+  }
+
+  .timeline::before {
+    left: 24px;
+  }
+
+  .timeline-label {
+    position: static;
+    display: inline-flex;
+    max-width: 100%;
+    margin-bottom: 10px;
+    white-space: normal;
+  }
+
+  .timeline-item-content {
+    width: 100%;
+    min-height: auto;
+    margin-left: 0;
+  }
+
+  .timeline-item-content::before {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .section__container {
+    padding: 3.5rem 1rem;
+  }
+
+  .section__header {
+    font-size: clamp(1.75rem, 8vw, 2.2rem);
+  }
+
+  .banner {
+    height: 78vh;
+    min-height: 460px;
+    background-attachment: scroll;
+  }
+
+  .timeline-item {
+    margin: 30px 0;
+  }
+
+  .timeline-item::before {
+    left: -16px;
+  }
+
+  .timeline-item-content {
+    padding: 18px;
+  }
+
+  .timeline-item-content p {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .discover__grid,
+  .destination__grid {
+    gap: 1rem;
+  }
+
+  .destination__card__details {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer__container {
+    gap: 2rem;
+  }
+}
