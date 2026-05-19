@@ -12,33 +12,32 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="LandingPage.css" />
+    <link rel="stylesheet" href="../shared/visualist-fixes.css" />
     <title>Visualist</title>
   </head>
   <body>
 
 
-   
+
 <nav class="navbar">
   <div class="content">
     <div class="logo">
       <a href="#">Visualist</a>
     </div>
     <ul class="menu-list">
-      <div class="icon cancel-btn">
-        <i class="fas fa-times"></i>
-      </div>
+      <li class="icon cancel-btn"><i class="fas fa-times"></i></li>
       <li><a href="#" class="home">Home</a></li>
-      <ul class="nav-menu">
-        <li class="dropdown">
-            <a href="#">Lessons</a>
-            <ul class="dropdown-menu">
-                <li><a href="/Visualist/MultimediaElements/multi.html">Multimedia Elements</a></li>
-                <li><a href="/Visualist/compositions/compo.html">Photography</a></li>
-                <li><a href="/Visualist/videographyfinalfinal/overview.html">Videography</a></li>
-            </ul>
-        </li>
-      </ul>
-      <li><a href="/Visualist/AboutUs/AboutUs.html">About Us</a></li>
+      <li class="dropdown">
+        <a href="#">Lessons</a>
+        <ul class="dropdown-menu">
+          <li><a href="../MultimediaElements/multi.html">Multimedia Elements</a></li>
+          <li><a href="../compositions/compo.html">Photography</a></li>
+          <li><a href="../videographyfinalfinal/overview.html">Videography</a></li>
+        </ul>
+      </li>
+      <li><a href="../AboutUs/AboutUs.html">About Us</a></li>
+      <li><button class="logout-btn" type="button" onclick="visualistLogout()">Log Out</button></li>
+    </ul>
     <div class="icon menu-btn">
       <i class="fas fa-bars"></i>
     </div>
@@ -63,7 +62,7 @@
             <div class="timeline-label" data-year="2">PHOTOGRAPHY</div>
             <div class="timeline-item-content" data-year="2">
                 <div class="pp">
-                  <p>Key elements such as composition, lighting, editing, and digital techniques, helping you master the art of capturing and enhancing stunning images./p>
+                  <p>Key elements such as composition, lighting, editing, and digital techniques, helping you master the art of capturing and enhancing stunning images.</p>
                   <p></p>
                   <p></p>
                   <p></p>
@@ -91,8 +90,6 @@
         </div>
     </div>
  </div>
-</div>
-</div>
 </div>
     <section class="section__container discover__container">
       <h2 class="section__header">All Talent In One Place</h2>
@@ -126,6 +123,7 @@
           <h4>Multimedia Elements</h4>
           <p>
             Offering an immersive experience that goes beyond what single-medium content can achieve.
+          </p>
         </div>
         <div class="discover__card">
           <span><i class="ri-video-line"></i></span>
@@ -153,7 +151,7 @@
           </h1>
         </div>
         <div class="checkbox-container">
-          <span class="dont-dos">Copyright <span style="color: green;">Do’s</span> & <span style="color: red;">Don’ts</span></span>
+          <span class="dont-dos">Copyright <span style="color: green;">Do's</span> & <span style="color: red;">Don'ts</span></span>
           <div class="checkbox-item">
             <div class="checkbox">
               <i class="ri-check-fill"></i>
@@ -176,13 +174,13 @@
             <div class="checkbox1">
               <i class="ri-close-fill"></i>
             </div>
-            <span class="description">Don’t sell or profit from others’ work.</span>
+            <span class="description">Don't sell or profit from others' work.</span>
           </div>
           <div class="checkbox-item">
             <div class="checkbox1">
               <i class="ri-close-fill"></i>
             </div>
-            <span class="description">Don’t claim others’ content as your own.</span>
+            <span class="description">Don't claim others' content as your own.</span>
           </div>
         </div>
       </section>
@@ -191,7 +189,7 @@
     <section class="section__container destination__container" id="about">
       <h2 class="section__header">Best Outputs</h2>
       <p class="section__description">
-        Discover the Most Loved projects by the developers 
+        Discover the Most Loved projects by the developers
       </p>
       <div class="destination__grid">
         <div class="destination__card">
@@ -310,7 +308,8 @@
         </div>
       </div>
       <div class="footer__bar">
-        Copyright © 2024 LFSY Creations. All rights reserved.
+        Copyright (c) 2024 LFSY Creations. All rights reserved.
+      </div>
     </footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -323,14 +322,14 @@
 
       if (window.scrollY > 0) {
         nav.classList.add('sticky');
-        navHeader.classList.add('sticky');
+        navHeader?.classList.add('sticky');
       } else {
         nav.classList.remove('sticky');
-        navHeader.classList.remove('sticky');
+        navHeader?.classList.remove('sticky');
       }
     });
     </script>
-        <script src = "login.js"></script>
+        <script src="../shared/visualist-session.js"></script>
 
   </body>
 </html>

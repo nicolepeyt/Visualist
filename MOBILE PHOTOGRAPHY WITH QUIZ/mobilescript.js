@@ -127,6 +127,7 @@ let score = 0;
 function loadQuestion() {
   const questionElement = document.getElementById("question");
   questionElement.textContent = questions[currentQuestionIndex].question;
+  window.updateQuizCounter?.(currentQuestionIndex, questions.length);
 
   // Load options
   questions[currentQuestionIndex].options.forEach((option, index) => {

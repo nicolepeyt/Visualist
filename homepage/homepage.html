@@ -22,51 +22,47 @@
    <div class="overlaying" id="overlay"></div>
 
    <!-- Login Form -->
-   <div class="login-form-container" id="loginForm">
+   <div class="login-form-container" id="loginForm" role="dialog" aria-modal="true" aria-labelledby="authTitle">
     <!-- <img src="logo.png" alt="" id = "logo" > -->
-    <div class = "logo1"><span id = "visual">VISUALIST</span></div>
-       <div class = "form-card-container">
-           <div class = "card-form">
-               <div class = "card-front">
-                   <div class = "form-content">
-                       <h2>Log In</h2> 
+    <div class="logo1"><span id="visual">VISUALIST</span></div>
+       <div class="form-card-container">
+           <div class="card-form">
+               <div class="card-front">
+                   <div class="form-content">
+                       <h2 id="authTitle">Log In</h2>
                        <form id="loginFormElement">                             
                            <label for="username">Username: </label>
                            <input type="text" id="username" name="username" required>
-                           <br>
                            <label for="password">Password: </label>
                            <div class="password-container">
                                <input type="password" id="password" name="password" required oninput="checkPasswordInput(this, 'login')">
                                <span class="toggle-password" id = "toggle-pass" onclick="togglePasswordVisibility()" style="display: none;">👁️</span>
                            </div>
-                           <br>
-                           <button id = "btn" type="submit">Log In</button>
+                           <button class="auth-btn" type="submit">Log In</button>
                        </form>                        
-                       <button id = "btn" class="toggle-btn" onclick="flipCard()">Sign Up</button>
+                       <button class="auth-btn auth-btn-secondary toggle-btn" type="button" onclick="flipCard()">Sign Up</button>
                    </div>
                </div>
-               <div class = "card-back">
-                   <div class ="form-content">
+               <div class="card-back">
+                   <div class="form-content">
                        <h2>Sign Up</h2>
                        <form id="signupFormElement">                             
                            <label for="create-user">Username: </label>
                            <input type="text" id="create-user" name="create-user" required>
-                           <br>
                            <label for="create-pass">Password: </label>
                            <div class="password-container">
                                <input type="password" id="create-pass" name="create-pass" required oninput="checkPasswordInput(this, 'signup')">
                                <span class="toggle-password" id = "toggle-pass" onclick="togglePasswordVisibilitySignup()" style="display: none;">👁️</span>
                            </div>
-                           <br>
-                           <button id = "btn" type="submit">Sign Up</button>
+                           <button class="auth-btn" type="submit">Sign Up</button>
                        </form>                        
-                       <!-- <button id = "btn" class="toggle-btn" onclick="flipCard()">Log In</button> -->
+                       <button class="auth-btn auth-btn-secondary toggle-btn" type="button" onclick="flipCard()">Log In</button>
                    </div>
                </div>
            </div>
        </div>    
-   </div>        
-</div>
+   </div>
+   <div class="auth-toast" id="authToast" role="status" aria-live="polite"></div>
 <nav class="navbar">
   <div class="content">
     <div class="logo">
@@ -77,7 +73,7 @@
         <i class="fas fa-times"></i>
       </div>
           <li><a href="#" class="home">Home</a></li>
-      <li><a href="/Visualist/AboutUs/AboutUs.html">About Us</a></li>
+      <li><a href="../AboutUs/AboutUs.html">About Us</a></li>
       <li><a class="btnn login-btn" id = "loginButton" onclick="login()">Log In</a></li>
     </ul>
     <div class="icon menu-btn">
@@ -104,7 +100,7 @@
             <div class="timeline-label" data-year="2">PHOTOGRAPHY</div>
             <div class="timeline-item-content" data-year="2">
                 <div class="pp">
-                  <p>Key elements such as composition, lighting, editing, and digital techniques, helping you master the art of capturing and enhancing stunning images./p>
+                  <p>Key elements such as composition, lighting, editing, and digital techniques, helping you master the art of capturing and enhancing stunning images.</p>
                   <p></p>
                   <p></p>
                   <p></p>
@@ -132,8 +128,6 @@
         </div>
     </div>
  </div>
-</div>
-</div>
 </div>
     <section class="section__container discover__container">
       <h2 class="section__header">All Talent In One Place</h2>
@@ -167,6 +161,7 @@
           <h4>Multimedia Elements</h4>
           <p>
             Offering an immersive experience that goes beyond what single-medium content can achieve.
+          </p>
         </div>
         <div class="discover__card">
           <span><i class="ri-video-line"></i></span>
@@ -314,7 +309,7 @@
           </div>
         </div>
       </div>
-    </section
+    </section>
 
     <footer id="contact">
       <div class="section__container footer__container">
@@ -363,6 +358,7 @@
       </div>
       <div class="footer__bar">
         Copyright © 2024 LFSY Creations. All rights reserved.
+      </div>
     </footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -375,10 +371,10 @@
 
       if (window.scrollY > 0) {
         nav.classList.add('sticky');
-        navHeader.classList.add('sticky');
+        navHeader?.classList.add('sticky');
       } else {
         nav.classList.remove('sticky');
-        navHeader.classList.remove('sticky');
+        navHeader?.classList.remove('sticky');
       }
     });
     </script>
