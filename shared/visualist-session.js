@@ -6,10 +6,10 @@
     const visualistIndex = path.lastIndexOf("/Visualist/");
 
     if (visualistIndex !== -1) {
-      return `${path.slice(0, visualistIndex + "/Visualist/".length)}homepage/homepage.html`;
+      return `${path.slice(0, visualistIndex + "/Visualist/".length)}homepage/index.html`;
     }
 
-    return "../homepage/homepage.html";
+    return "../homepage/index.html";
   }
 
   function logout() {
