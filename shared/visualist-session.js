@@ -12,8 +12,15 @@
     return "../homepage/index.html";
   }
 
+  function requireLogin() {
+    if (sessionStorage.getItem(LOGGED_IN_KEY) === "true") return true;
+
+    window.location.href = `${pathToHome()}?login=1`;
+    return false;
+  }
+
   function logout() {
-    localStorage.removeItem(LOGGED_IN_KEY);
+    sessionStorage.removeItem(LOGGED_IN_KEY);
     window.location.href = pathToHome();
   }
 
@@ -64,6 +71,8 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
+    if (!requireLogin()) return;
+
     ensureLogoutButton();
     setupMobileMenu();
     setupStickyNav();

@@ -22,21 +22,12 @@
           <a href="#">Visualist</a>
         </div>
         <ul class="menu-list">
-          <div class="icon cancel-btn">
+          <li class="icon cancel-btn">
             <i class="fas fa-times"></i>
-          </div>
-          <li><a href="../LandingPage/LandingPage.html" id="homeMenu">Home</a></li>
-          <ul class="nav-menu">
-            <li class="dropdown">
-                <a href="#">Lessons</a>
-                <ul class="dropdown-menu">
-                    <li><a href="../MultimediaElements/multi.html">Multimedia Elements</a></li>
-                    <li><a href="../compositions/compo.html">Photography</a></li>
-                    <li><a href="../videographyfinalfinal/overview.html">Videography</a></li>
-                </ul>
-            </li>
-          </ul>
+          </li>
+          <li><a href="../homepage/index.html" id="homeMenu">Home</a></li>
           <li><a href="#intro" id="aboutMenu">About Us</a></li>
+          <li><a class="btnn login-btn" href="../homepage/index.html?login=1" id="authMenu">Log In</a></li>
 
         </ul>
         <div class="icon menu-btn">
@@ -57,12 +48,12 @@
       </div>
       <div class="card">
         <img src="pics/me1.png" alt="Card 2 Image">
-        <h3>Faith Nicole Amila</h3>
+        <h3>Nicole Amila</h3>
         <p>Backend UI/UX Specialist</p>
       </div>
       <div class="card">
         <img src="pics/GWAPO.png" alt="Card 3 Image">
-        <h3>Louell Clifford Saguindan</h3>
+        <h3>Louell Saguindan</h3>
         <p>Backend UI/UX Specialist</p>
       </div>
       <div class="card">
@@ -105,7 +96,7 @@
       </div>
 
       <div class="about__content" id="faith">
-        <h4 class="typing-effect">Faith Nicole Amila</h4>
+        <h4 class="typing-effect">Nicole Amila</h4>
         <p class="section__description">
           Hello, I'm Faith! I specialize in the backend of our project, building the systems that make everything work smoothly.
           I'm focused on creating the foundation that powers our platform.
@@ -130,7 +121,7 @@
       </div>
 
       <div class="about__content" id="clifford">
-        <h4>Louell Clifford Saguindan</h4>
+        <h4>Louell Saguindan</h4>
         <p class="section__description">
           Hi, I'm Louell! I work on the backend to create the server-side functions.
           I ensure everything works well behind the scenes, so the website is fast and reliable.
@@ -191,8 +182,8 @@
           <ul class="footer__links">
             <li><a href="#lawrence">Mr. Lawrence John Arche</a></li>
             <li><a href="#shyna">Ms. Shyna Ann De Guzman</a></li>
-            <li><a href="#clifford">Mr. Louell Clifford Saguindan</a></li>
-            <li><a href="#faith">Ms. Faith Nicole Amila</a></li>
+            <li><a href="#clifford">Mr. Louell Saguindan</a></li>
+            <li><a href="#faith">Ms. Nicole Amila</a></li>
           </ul>
         </div>
         <div class="footer__col">
@@ -255,7 +246,43 @@
         navHeader?.classList.remove('sticky');
       }
     });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      if (sessionStorage.getItem('visualistLoggedIn') !== 'true') return;
+
+      const menuList = document.querySelector('.menu-list');
+      if (!menuList) return;
+
+      menuList.innerHTML = `
+        <li class="icon cancel-btn"><i class="fas fa-times"></i></li>
+        <li><a href="../LandingPage/LandingPage.html" class="home">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Lessons</a>
+          <ul class="dropdown-menu">
+            <li><a href="../MultimediaElements/multi.html">Multimedia Elements</a></li>
+            <li><a href="../compositions/compo.html">Photography</a></li>
+            <li><a href="../videographyfinalfinal/overview.html">Videography</a></li>
+          </ul>
+        </li>
+        <li><a href="#intro" id="aboutMenu">About Us</a></li>
+        <li><button class="logout-btn" type="button">Log Out</button></li>
+      `;
+
+      menuList.querySelector('.logout-btn')?.addEventListener('click', function () {
+        sessionStorage.removeItem('visualistLoggedIn');
+        window.location.href = '../homepage/index.html';
+      });
+
+      const menuButton = document.querySelector('.menu-btn');
+      const cancelButton = menuList.querySelector('.cancel-btn');
+      menuButton?.addEventListener('click', function () {
+        menuList.classList.add('open');
+      });
+      cancelButton?.addEventListener('click', function () {
+        menuList.classList.remove('open');
+      });
+    });
+
     </script>
-      <script src="../shared/visualist-session.js"></script>
 </body>
 </html>

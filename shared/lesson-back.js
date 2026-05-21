@@ -1,4 +1,22 @@
 (function () {
+  const LOGGED_IN_KEY = "visualistLoggedIn";
+
+  function pathToHome() {
+    const path = window.location.pathname.replace(/\\/g, "/");
+    const visualistIndex = path.lastIndexOf("/Visualist/");
+
+    if (visualistIndex !== -1) {
+      return `${path.slice(0, visualistIndex + "/Visualist/".length)}homepage/index.html`;
+    }
+
+    return "../../homepage/index.html";
+  }
+
+  if (sessionStorage.getItem(LOGGED_IN_KEY) !== "true") {
+    window.location.href = `${pathToHome()}?login=1`;
+    return;
+  }
+
   function getLessonArea() {
     const path = window.location.pathname.replace(/\\/g, "/");
 
@@ -43,7 +61,12 @@
     document.body.classList.add(`lesson-area-${getLessonArea()}`);
 
     document.querySelectorAll(".quiz-button").forEach((quizButton) => {
-      quizButton.parentElement?.classList.add("lesson-quiz-action");
+      if (quizButton.parentElement?.classList.contains("lesson-quiz-action")) return;
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "lesson-quiz-action";
+      quizButton.before(wrapper);
+      wrapper.appendChild(quizButton);
     });
 
     if (document.querySelector(".lesson-back-button")) return;

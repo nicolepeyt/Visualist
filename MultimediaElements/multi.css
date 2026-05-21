@@ -1202,9 +1202,7 @@ header .section__container {
       width: 80%;
       height: 2px;
       background: linear-gradient(to right, #2cabe3, #38ca79); /* Gradient divider */
-      margin: 20px auto; /* Center the line */
-      margin-top: -50px;
-      
+      margin: 20px auto;
     }
   
     .services-section {
