@@ -1,3 +1,5 @@
+@import url("./visualist-footer.css");
+
 .lesson-back-button {
   position: fixed;
   top: 12px;
@@ -43,7 +45,7 @@ body {
 
 .container {
   top: 0 !important;
-  margin-top: 54px !important;
+  margin-top: 46px !important;
   padding-top: 8px !important;
   overflow: visible !important;
 }
@@ -62,65 +64,285 @@ body {
   padding-top: 0 !important;
 }
 
-body:is(.lesson-area-multimedia, .lesson-area-videography) .content,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .color-models,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .content-container1,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .color-container,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .colorcmyk-container,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .colorkerning-container,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .colortracking-container,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .color-containeremotions,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .color-containerat,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .color-containersig,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .wrap-tip,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .wrap-challenge,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .tips,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .challenge,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .keydif,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .highlight1,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .some,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .seven,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .line,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .line1,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .line2 {
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .content,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .color-models,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .content-container1,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .color-container,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .colorcmyk-container,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .colorkerning-container,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .colortracking-container,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .color-containeremotions,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .color-containerat,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .color-containersig,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .colorgolden-container,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .l-container,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .combined,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .figures,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .wrap-tip,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .wrap-challenge,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .tips,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .challenge,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .keydif,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .highlight1,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .three,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .four,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .five,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .essential,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .some,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .seven,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .line,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .line1,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .line2 {
   top: auto !important;
 }
 
-body:is(.lesson-area-multimedia, .lesson-area-videography) .content,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .color-models {
-  margin-top: 22px !important;
-  padding: clamp(14px, 3vw, 24px) !important;
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .content,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .color-models {
+  margin-top: 14px !important;
+  padding: clamp(10px, 2.5vw, 18px) !important;
 }
 
-body:is(.lesson-area-multimedia, .lesson-area-videography) .content h2,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .color-models h2,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .keydif h2,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .highlight1 h2,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .some h2,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .seven h2 {
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .content h2,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .color-models h2,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .keydif h2,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .highlight1 h2,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .three h2,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .four h2,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .five h2,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .essential h2,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .some h2,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .seven h2 {
   margin-top: 0 !important;
   margin-bottom: 18px !important;
 }
 
-body:is(.lesson-area-multimedia, .lesson-area-videography) .color-container,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .colorcmyk-container,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .colorkerning-container,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .colortracking-container,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .color-containeremotions,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .color-containerat,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .color-containersig,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .content-container1,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .wrap-tip,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .wrap-challenge {
-  margin-top: clamp(28px, 4vw, 48px) !important;
-  margin-bottom: clamp(20px, 3vw, 36px) !important;
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .color-container,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .colorcmyk-container,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .colorkerning-container,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .colortracking-container,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .color-containeremotions,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .color-containerat,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .color-containersig,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .colorgolden-container,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .l-container,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .combined,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .content-container1,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .wrap-tip,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .wrap-challenge {
+  margin-top: clamp(18px, 3vw, 30px) !important;
+  margin-bottom: clamp(14px, 2.5vw, 24px) !important;
 }
 
-body:is(.lesson-area-multimedia, .lesson-area-videography) .line,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .line1,
-body:is(.lesson-area-multimedia, .lesson-area-videography) .line2 {
-  margin-top: clamp(24px, 4vw, 44px) !important;
-  margin-bottom: clamp(24px, 4vw, 44px) !important;
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .line,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .line1,
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography) .line2 {
+  margin-top: clamp(18px, 3vw, 30px) !important;
+  margin-bottom: clamp(18px, 3vw, 30px) !important;
+}
+
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography)
+  :is(.color-container, .colorcmyk-container, .colorkerning-container, .colortracking-container, .color-containeremotions, .color-containerat, .color-containersig, .colorgolden-container, .l-container, .combined, .wrap-tip, .wrap-challenge) {
+  width: 100% !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography)
+  :is(.color-container, .colorcmyk-container, .colorkerning-container, .colortracking-container, .color-containeremotions, .color-containerat, .color-containersig, .colorgolden-container, .combined, .wrap-tip, .wrap-challenge) {
+  gap: clamp(1rem, 3vw, 2rem) !important;
+}
+
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography)
+  :is(.color-container, .colorcmyk-container, .colorkerning-container, .colortracking-container, .color-containeremotions, .color-containerat, .color-containersig, .colorgolden-container, .combined, .wrap-tip, .wrap-challenge) img {
+  max-width: min(100%, 420px) !important;
+  height: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography)
+  :is(.three, .four, .five, .essential, .keydif, .highlight1) {
+  margin-top: clamp(1.25rem, 3.5vw, 2.25rem) !important;
+  margin-bottom: clamp(0.75rem, 2vw, 1.25rem) !important;
+  text-align: center !important;
+}
+
+body.lesson-pre-production .container {
+  width: min(100%, 1000px) !important;
+  margin: 46px auto 0 !important;
+  padding: 8px 20px 0 !important;
+}
+
+body.lesson-pre-production .overlay-text {
+  margin: 0 0 1rem !important;
+  padding: 0 !important;
+  top: auto !important;
+  font-size: clamp(3rem, 10vw, 6.25rem) !important;
+  line-height: 1.05 !important;
+}
+
+body.lesson-pre-production :is(.content, .color-models) {
+  position: static !important;
+  margin: clamp(1rem, 3vw, 1.75rem) auto 0 !important;
+  padding: clamp(10px, 2.5vw, 18px) !important;
+}
+
+body.lesson-pre-production :is(.content h2, .color-models h2, .seven h2, .some h2) {
+  max-width: 100% !important;
+  margin: 0 auto 1rem !important;
+  font-size: clamp(2rem, 6vw, 3rem) !important;
+  line-height: 1.12 !important;
+  text-align: center !important;
+}
+
+body.lesson-pre-production .line,
+body.lesson-pre-production .line2 {
+  margin: clamp(1.5rem, 4vw, 2.5rem) auto !important;
+}
+
+body.lesson-pre-production :is(.color-container, .colorcmyk-container) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  max-width: 1000px !important;
+  margin: clamp(1.5rem, 4vw, 2.5rem) auto !important;
+  padding: 0 !important;
+  gap: clamp(1rem, 3vw, 2rem) !important;
+}
+
+body.lesson-pre-production :is(.color-description, .colorcmyk-description) {
+  flex: 1 1 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.lesson-pre-production :is(.color-description h2, .colorcmyk-description h2) {
+  margin: 0 0 1rem !important;
+  padding: 0 !important;
+  font-size: clamp(1.8rem, 5vw, 3rem) !important;
+  line-height: 1.12 !important;
+  text-align: left !important;
+}
+
+body.lesson-pre-production :is(.color-description p, .colorcmyk-description p, .content p, .color-models p) {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #333 !important;
+  line-height: 1.7 !important;
+  text-align: justify !important;
+}
+
+body.lesson-pre-production :is(.color-container, .colorcmyk-container) img {
+  display: block !important;
+  width: min(100%, 400px) !important;
+  height: auto !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+}
+
+@media (max-width: 760px) {
+  body.lesson-pre-production :is(.color-container, .colorcmyk-container) {
+    flex-direction: column !important;
+  }
+
+  body.lesson-pre-production .colorcmyk-container img {
+    order: 2;
+  }
+
+  body.lesson-pre-production :is(.color-description h2, .colorcmyk-description h2, .color-description p, .colorcmyk-description p) {
+    text-align: center !important;
+  }
+}
+
+body.lesson-rule-thirds footer {
+  width: 100% !important;
+  margin-top: clamp(1.75rem, 4vw, 3rem) !important;
+  padding: clamp(2rem, 4.5vw, 3.25rem) clamp(1.25rem, 5vw, 5.4rem) 0 !important;
+  color: #8b8b9a !important;
+  background: #fff !important;
+}
+
+body.lesson-rule-thirds .footer__container {
+  display: grid !important;
+  grid-template-columns: 1.35fr 0.85fr 0.9fr 1fr !important;
+  gap: clamp(1.5rem, 4.5vw, 4rem) !important;
+  width: 100% !important;
+  max-width: 1188px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+body.lesson-rule-thirds .footer__col,
+body.lesson-rule-thirds .footer__links {
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+body.lesson-rule-thirds .footer__logo .logo,
+body.lesson-rule-thirds .footer__logo a {
+  display: inline-block !important;
+  margin: 0 0 1.25rem !important;
+  padding: 0 !important;
+  font-size: clamp(1.75rem, 3vw, 2rem) !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+}
+
+body.lesson-rule-thirds .footer__col h4 {
+  margin: 0 0 1.25rem !important;
+  padding: 0 !important;
+  font-size: 1.18rem !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  color: #2cabe3 !important;
+  letter-spacing: 0 !important;
+}
+
+body.lesson-rule-thirds .footer__col p,
+body.lesson-rule-thirds .footer__links li,
+body.lesson-rule-thirds .footer__links a,
+body.lesson-rule-thirds .footer__links span {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0.98rem !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  text-align: left !important;
+  color: #8b8b9a !important;
+  background: none !important;
+}
+
+body.lesson-rule-thirds .footer__links {
+  display: grid !important;
+  gap: 0.75rem !important;
+  list-style: none !important;
+}
+
+body.lesson-rule-thirds .footer__socials {
+  display: none !important;
+}
+
+body.lesson-rule-thirds .footer__bar {
+  width: 100% !important;
+  max-width: 1188px !important;
+  margin: clamp(2rem, 4.5vw, 3.25rem) auto 0 !important;
+  padding: 0.75rem 0 !important;
+  font-size: 0.88rem !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
+  color: #8b8b9a !important;
+}
+
+@media (max-width: 900px) {
+  body.lesson-rule-thirds .footer__container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
 }
 
 .quiz-button {
@@ -133,7 +355,7 @@ body:is(.lesson-area-multimedia, .lesson-area-videography) .line2 {
   width: max-content !important;
   max-width: calc(100vw - 48px) !important;
   min-height: 48px !important;
-  margin: clamp(28px, 4vw, 44px) auto clamp(36px, 5vw, 64px) !important;
+  margin: clamp(16px, 2.5vw, 24px) auto clamp(12px, 2vw, 20px) !important;
   white-space: normal !important;
 }
 
@@ -146,14 +368,19 @@ body:is(.lesson-area-multimedia, .lesson-area-videography) .line2 {
   display: flex !important;
   justify-content: center !important;
   margin-top: 0 !important;
-  margin-bottom: 0 !important;
+  margin-bottom: clamp(0.75rem, 2vw, 1.25rem) !important;
 }
 
 .container > div:has(> .quiz-button) {
   display: flex !important;
   justify-content: center !important;
   margin-top: 0 !important;
-  margin-bottom: 0 !important;
+  margin-bottom: clamp(0.75rem, 2vw, 1.25rem) !important;
+}
+
+.lesson-quiz-action + .visualist-footer,
+.container + .visualist-footer {
+  margin-top: clamp(0.75rem, 2vw, 1.5rem) !important;
 }
 
 @media (max-width: 560px) {
@@ -163,10 +390,34 @@ body:is(.lesson-area-multimedia, .lesson-area-videography) .line2 {
     padding-right: 14px !important;
   }
 
+  body.lesson-rule-thirds .footer__container {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+
+  body.lesson-rule-thirds .footer__col h4,
+  body.lesson-rule-thirds .footer__logo .logo,
+  body.lesson-rule-thirds .footer__logo a {
+    margin-bottom: 1rem !important;
+  }
+
   .content,
   .color-models {
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+
+  body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography)
+    :is(.color-container, .colorcmyk-container, .colorkerning-container, .colortracking-container, .color-containeremotions, .color-containerat, .color-containersig, .colorgolden-container, .combined, .wrap-tip, .wrap-challenge) {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  body:is(.lesson-area-multimedia, .lesson-area-photography, .lesson-area-videography)
+    :is(.color-description, .colorcmyk-description, .colorkerning-description, .colorsecondary-description, .colorgolden-description, .tips, .challenge) {
+    max-width: 100% !important;
+    margin: 0 !important;
+    text-align: center !important;
   }
 
   .quiz-button {
@@ -234,12 +485,308 @@ body.lesson-rule-thirds .topics {
   margin-top: 0.75rem !important;
 }
 
+body.lesson-rule-thirds .whatis {
+  margin-top: clamp(1.5rem, 4vw, 2.5rem) !important;
+  font-size: inherit !important;
+}
+
+body.lesson-rule-thirds h2#ruleOfThirds {
+  max-width: 1000px !important;
+  margin: 0 auto 1rem !important;
+  font-size: clamp(2.4rem, 6vw, 4rem) !important;
+  line-height: 1.12 !important;
+  text-align: center !important;
+}
+
+body.lesson-rule-thirds .content {
+  position: static !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  max-width: 1000px !important;
+}
+
+body.lesson-rule-thirds .content p {
+  margin: 0 auto !important;
+  max-width: 980px !important;
+  color: #666 !important;
+  line-height: 1.7 !important;
+  text-align: left !important;
+}
+
+body.lesson-rule-thirds .services-section {
+  display: block !important;
+  margin: clamp(1.5rem, 4vw, 2.75rem) auto 0 !important;
+  padding: 0 !important;
+  max-width: 1000px !important;
+  text-align: center !important;
+}
+
+body.lesson-rule-thirds .text h2 {
+  margin: 0 auto 1rem !important;
+  font-size: clamp(2rem, 5vw, 3.25rem) !important;
+  line-height: 1.15 !important;
+  text-align: center !important;
+}
+
+body.lesson-rule-thirds .text-content {
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+body.lesson-rule-thirds .text-content p {
+  margin: 0 auto !important;
+  max-width: 760px !important;
+  color: #333 !important;
+  line-height: 1.7 !important;
+  text-align: left !important;
+}
+
+body.lesson-rule-thirds .examplesgrid {
+  position: relative !important;
+  top: auto !important;
+  clear: both !important;
+  margin: clamp(2rem, 5vw, 3rem) auto 1.25rem !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+body.lesson-rule-thirds .examplesgrid h2 {
+  margin: 0 !important;
+  font-size: clamp(2rem, 5vw, 3.25rem) !important;
+  line-height: 1.15 !important;
+}
+
+body.lesson-rule-thirds .wrapper1 {
+  position: relative !important;
+  top: auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: clamp(1rem, 3vw, 1.5rem) !important;
+  width: min(100%, 940px) !important;
+  margin: 0 auto clamp(2rem, 5vw, 3rem) !important;
+  padding: 0 !important;
+  align-items: stretch !important;
+}
+
+body.lesson-rule-thirds .wrapper1 .col,
+body.lesson-rule-thirds .wrapper1 .containert {
+  position: relative !important;
+  top: auto !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.lesson-rule-thirds .wrapper1 .col {
+  height: auto !important;
+  overflow: hidden !important;
+  border-radius: 8px !important;
+}
+
+body.lesson-rule-thirds .wrapper1 .containert {
+  aspect-ratio: 3 / 4 !important;
+  min-height: 0 !important;
+}
+
+body.lesson-rule-thirds .wrapper1 .image {
+  width: 100% !important;
+  height: 100% !important;
+  background-size: cover !important;
+  background-position: center !important;
+  border-radius: 8px !important;
+}
+
 @media (max-width: 760px) {
   body.lesson-rule-thirds .lesson-back-button {
     top: 12px;
   }
 
-  body.lesson-rule-thirds .discover__container {
-    padding-top: 3.5rem !important;
+body.lesson-rule-thirds .discover__container {
+  padding-top: 3.5rem !important;
+}
+
+  body.lesson-rule-thirds .wrapper1 {
+    grid-template-columns: 1fr !important;
+    width: min(100%, 360px) !important;
+  }
+}
+
+body.lesson-natural-light {
+  display: block !important;
+  align-items: initial !important;
+  justify-content: initial !important;
+  margin: 0 !important;
+  overflow-x: hidden !important;
+  font-family: "Poppins", "Open Sans", Arial, sans-serif !important;
+}
+
+body.lesson-natural-light .container {
+  display: block !important;
+  width: min(100%, 1000px) !important;
+  max-width: 1000px !important;
+  margin: 46px auto 0 !important;
+  padding: 8px 20px 0 !important;
+  position: relative !important;
+  top: auto !important;
+  overflow: visible !important;
+}
+
+body.lesson-natural-light .header-image {
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+body.lesson-natural-light .header-image img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  border-radius: 8px !important;
+}
+
+body.lesson-natural-light .overlay-text {
+  margin: 0 0 1rem !important;
+  padding: 0 !important;
+  top: auto !important;
+  font-size: clamp(3rem, 10vw, 6.25rem) !important;
+  line-height: 1.05 !important;
+  text-align: center !important;
+}
+
+body.lesson-natural-light :is(.content, .color-models) {
+  position: static !important;
+  top: auto !important;
+  margin: clamp(1rem, 3vw, 1.75rem) auto 0 !important;
+  padding: clamp(10px, 2.5vw, 18px) !important;
+}
+
+body.lesson-natural-light :is(.content h2, .color-models h2, .three h2, .four h2, .five h2) {
+  margin: 0 0 1rem !important;
+  font-size: clamp(2rem, 6vw, 3rem) !important;
+  line-height: 1.12 !important;
+  text-align: center !important;
+}
+
+body.lesson-natural-light :is(.content p, .color-models p, .color-description p, .colorcmyk-description p, .colorgolden-description p, .tips p, .challenge p) {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #333 !important;
+  line-height: 1.7 !important;
+  text-align: left !important;
+}
+
+body.lesson-natural-light :is(.three, .four, .five) {
+  margin: clamp(1.25rem, 3.5vw, 2.25rem) auto clamp(0.75rem, 2vw, 1.25rem) !important;
+  text-align: center !important;
+}
+
+body.lesson-natural-light .l-container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  width: 100% !important;
+  margin: 0 auto clamp(1.25rem, 3vw, 2rem) !important;
+}
+
+body.lesson-natural-light .image-item {
+  width: min(100%, 300px) !important;
+}
+
+body.lesson-natural-light :is(.colorgolden-container, .color-container, .colorcmyk-container, .combined, .wrap-tip, .wrap-challenge) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  max-width: 1000px !important;
+  margin: clamp(1.25rem, 3.5vw, 2.25rem) auto !important;
+  padding: 0 !important;
+  gap: clamp(1rem, 3vw, 2rem) !important;
+  position: relative !important;
+  top: auto !important;
+}
+
+body.lesson-natural-light .combined {
+  align-items: flex-start !important;
+  margin-top: clamp(2rem, 5vw, 3.5rem) !important;
+}
+
+body.lesson-natural-light .figures {
+  flex: 0 0 min(100%, 360px) !important;
+  display: grid !important;
+  gap: 1rem !important;
+}
+
+body.lesson-natural-light figure.snip0016 {
+  position: relative !important;
+  top: auto !important;
+  width: 100% !important;
+  max-width: 360px !important;
+  margin: 0 !important;
+}
+
+body.lesson-natural-light figure.snip0016 + figure.snip0016 {
+  margin-top: 1rem !important;
+}
+
+body.lesson-natural-light :is(.color-description, .colorcmyk-description, .colorgolden-description) {
+  flex: 1 1 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.lesson-natural-light :is(.color-description h2, .colorcmyk-description h2, .colorgolden-description h2) {
+  margin: 0 0 1rem !important;
+  padding: 0 !important;
+  font-size: clamp(1.8rem, 4.8vw, 3rem) !important;
+  line-height: 1.12 !important;
+  text-align: left !important;
+}
+
+body.lesson-natural-light :is(.colorgolden-container, .color-container, .colorcmyk-container, .combined, .wrap-tip, .wrap-challenge) img {
+  display: block !important;
+  width: min(100%, 380px) !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  border-radius: 10px !important;
+  object-fit: cover !important;
+}
+
+body.lesson-natural-light :is(.tips, .challenge) {
+  max-width: 620px !important;
+  margin: 0 !important;
+  padding: 20px !important;
+}
+
+body.lesson-natural-light .lesson-quiz-action {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin: clamp(1.25rem, 3vw, 2rem) auto clamp(0.75rem, 2vw, 1.25rem) !important;
+}
+
+body.lesson-natural-light .quiz-button {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 760px) {
+  body.lesson-natural-light .container {
+    padding-inline: 14px !important;
+  }
+
+  body.lesson-natural-light :is(.colorgolden-container, .color-container, .colorcmyk-container, .combined, .wrap-tip, .wrap-challenge) {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  body.lesson-natural-light :is(.color-description h2, .colorcmyk-description h2, .colorgolden-description h2, .content p, .color-models p, .color-description p, .colorcmyk-description p, .colorgolden-description p, .tips p, .challenge p) {
+    text-align: center !important;
   }
 }

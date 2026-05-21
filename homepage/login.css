@@ -4,6 +4,7 @@
   -webkit-text-fill-color: transparent;
 }
 
+html.no-scroll,
 body.no-scroll {
   overflow: hidden;
 }
@@ -46,6 +47,32 @@ body.no-scroll {
 .login-form-container.active {
   opacity: 1;
   transform: translate(-50%, -50%);
+}
+
+.login-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  font: inherit;
+  font-size: 1.45rem;
+  line-height: 1;
+  color: #4b5563;
+  background: #f3f8fb;
+  border: 1px solid rgba(44, 171, 227, 0.22);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.login-close-btn:hover,
+.login-close-btn:focus-visible {
+  color: #111827;
+  background: #e8f6fc;
+  outline: none;
 }
 
 .logo1 {

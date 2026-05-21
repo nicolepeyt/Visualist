@@ -1,13 +1,15 @@
 const AUTH_STORAGE_KEY = "visualistUser";
+const LOGIN_SESSION_KEY = "visualistLoggedIn";
 const LOGIN_REDIRECT = "../LandingPage/LandingPage.html";
 
-let isLoggedIn = localStorage.getItem("visualistLoggedIn") === "true";
-let autoPromptShown = false;
+let isLoggedIn = sessionStorage.getItem(LOGIN_SESSION_KEY) === "true";
+let lastScrollY = window.scrollY;
 
 const overlay = document.getElementById("overlay");
 const loginForm = document.getElementById("loginForm");
 const authToast = document.getElementById("authToast");
 const card = document.querySelector(".card-form");
+const loginCloseBtn = document.querySelector(".login-close-btn");
 const menuBtn = document.querySelector(".menu-btn");
 const cancelBtn = document.querySelector(".cancel-btn");
 const menuList = document.querySelector(".menu-list");
@@ -40,11 +42,12 @@ function openLoginForm(showSignup = false) {
   if (isLoggedIn || !overlay || !loginForm) return;
 
   card?.classList.toggle("flipped", showSignup);
+  document.documentElement.classList.add("no-scroll");
+  document.body.classList.add("no-scroll");
   overlay.classList.add("active");
   loginForm.style.display = "block";
 
   window.setTimeout(() => {
-    document.body.classList.add("no-scroll");
     loginForm.classList.add("active");
   }, 50);
 
@@ -54,6 +57,7 @@ function openLoginForm(showSignup = false) {
 function closeLoginForm() {
   overlay?.classList.remove("active");
   loginForm?.classList.remove("active");
+  document.documentElement.classList.remove("no-scroll");
   document.body.classList.remove("no-scroll");
 
   window.setTimeout(() => {
@@ -131,7 +135,7 @@ document.getElementById("loginFormElement")?.addEventListener("submit", (event) 
 
   if (savedUser && username === savedUser.username && password === savedUser.password) {
     isLoggedIn = true;
-    localStorage.setItem("visualistLoggedIn", "true");
+    sessionStorage.setItem(LOGIN_SESSION_KEY, "true");
     showNotice("Login successful. Opening your dashboard...", "success");
     closeLoginForm();
 
@@ -161,13 +165,28 @@ document.getElementById("signupFormElement")?.addEventListener("submit", (event)
   resetAuthFields();
 });
 
-overlay?.addEventListener("click", closeLoginForm);
+if (new URLSearchParams(window.location.search).get("login") === "1" && !isLoggedIn) {
+  openLoginForm(false);
+}
+
+overlay?.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (!isLoggedIn && loginForm?.classList.contains("active")) {
+    showNotice("Use the close button if you want to continue without logging in.", "info");
+  }
+});
+
+loginCloseBtn?.addEventListener("click", closeLoginForm);
 
 window.addEventListener("scroll", () => {
-  if (!isLoggedIn && !autoPromptShown && window.scrollY > 1500) {
-    autoPromptShown = true;
+  const currentScrollY = window.scrollY;
+  const isScrollingDown = currentScrollY > lastScrollY;
+
+  if (!isLoggedIn && !loginForm?.classList.contains("active") && isScrollingDown && currentScrollY > 1500) {
     openLoginForm(false);
   }
+
+  lastScrollY = currentScrollY;
 });
 
 menuBtn?.addEventListener("click", () => {
@@ -187,7 +206,6 @@ menuList?.addEventListener("click", (event) => {
 document.addEventListener("DOMContentLoaded", () => {
   const loginButton = document.getElementById("loginButton");
   if (loginButton && isLoggedIn) {
-    loginButton.textContent = "Continue";
-    loginButton.setAttribute("aria-label", "Continue to Landing Page");
+    loginButton.setAttribute("aria-label", "Open logged-in homepage");
   }
 });

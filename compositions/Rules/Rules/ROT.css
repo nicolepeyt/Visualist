@@ -2094,6 +2094,188 @@ header .section__container {
   .image:hover + .description {
     bottom: 0; /* Slide up into view when hovering over the image */
   }
-  
-  
-  
+
+/* Rule of Thirds topic — layout spacing */
+body.lesson-rule-thirds {
+  display: block;
+  overflow-x: hidden;
+}
+
+body.lesson-rule-thirds .discover__container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3.75rem 1rem 2rem;
+}
+
+body.lesson-rule-thirds .container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  overflow: visible;
+}
+
+body.lesson-rule-thirds .overlay-text h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 7vw, 4.5rem);
+  line-height: 1.05;
+  text-align: center;
+  transform: none;
+}
+
+body.lesson-rule-thirds .topics {
+  position: static;
+  margin: 0.75rem auto;
+  width: fit-content;
+}
+
+body.lesson-rule-thirds .whatis {
+  margin: 1.5rem auto 0;
+  font-size: inherit;
+}
+
+body.lesson-rule-thirds h2#ruleOfThirds {
+  margin: 0 auto 1rem;
+  max-width: 100%;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1.12;
+  text-align: center;
+}
+
+body.lesson-rule-thirds .content {
+  position: static;
+  margin: 0 auto 1.5rem;
+  padding: 0;
+}
+
+body.lesson-rule-thirds .content p {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0;
+  color: #666;
+  line-height: 1.7;
+}
+
+body.lesson-rule-thirds .text h2 {
+  margin: 2rem auto 1rem;
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  text-align: center;
+}
+
+body.lesson-rule-thirds .text-content p {
+  margin: 0 auto 1.5rem;
+  max-width: 760px;
+  text-align: left;
+}
+
+body.lesson-rule-thirds .examplesgrid h2 {
+  margin: 2rem auto 1.5rem;
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+}
+
+body.lesson-rule-thirds .wrapper1,
+body.lesson-rule-thirds .wrapper,
+body.lesson-rule-thirds .wrapper-portrait {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 2rem auto;
+  padding: 0;
+}
+
+body.lesson-rule-thirds .col {
+  width: min(300px, 100%);
+  height: auto;
+  min-height: 320px;
+}
+
+body.lesson-rule-thirds .how-it-works {
+  margin: 2rem auto;
+}
+
+body.lesson-rule-thirds .for-orientation,
+body.lesson-rule-thirds .content-portrait {
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+body.lesson-rule-thirds .landscapeClass,
+body.lesson-rule-thirds .portraitclass {
+  margin: 0 0 1rem;
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  text-align: center;
+}
+
+body.lesson-rule-thirds .for-orientation p,
+body.lesson-rule-thirds .content-portrait p {
+  margin: 0 0 1rem;
+  text-align: left;
+}
+
+body.lesson-rule-thirds .l-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 2rem auto;
+}
+
+body.lesson-rule-thirds .image-item {
+  width: min(300px, 100%);
+  height: 200px;
+}
+
+body.lesson-rule-thirds .rot {
+  position: static;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+body.lesson-rule-thirds .rot h2 {
+  position: static;
+  margin: 0 0 1rem;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+}
+
+body.lesson-rule-thirds .p-container {
+  position: static;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+body.lesson-rule-thirds .wrap-tip,
+body.lesson-rule-thirds .wrap-challenge {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+body.lesson-rule-thirds .wrap-tip img,
+body.lesson-rule-thirds .wrap-challenge img {
+  width: min(280px, 100%);
+  height: auto;
+  margin: 0;
+}
+
+body.lesson-rule-thirds .tips,
+body.lesson-rule-thirds .challenge {
+  flex: 1 1 280px;
+  max-width: 600px;
+  margin: 0;
+}
+
+body.lesson-rule-thirds .arrange-timeline,
+body.lesson-rule-thirds .for-gif {
+  margin: 2rem auto;
+}
+
+@media (max-width: 760px) {
+  body.lesson-rule-thirds .wrapper1 {
+    width: 100%;
+  }
+}
